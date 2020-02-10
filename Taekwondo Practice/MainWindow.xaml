@@ -5,8 +5,20 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Taekwondo_Practice"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-
-    </Grid>
+        Title="MainWindow" Height="750" Width="1200" WindowState="Maximized">
+    <DockPanel LastChildFill="False">
+        <Menu DockPanel.Dock="Top" Foreground="Black">
+            <Menu.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF888888"/>
+                    <GradientStop Color="#FF686868" Offset="1"/>
+                </LinearGradientBrush>
+            </Menu.Background>
+            <MenuItem Header="_File"/>
+            <MenuItem Header="_Settings"/>
+        </Menu>
+        <Grid DockPanel.Dock="Left" Width="300" Background="#FF1F1F1F">
+            <ListView Width="300" Margin="0,60,0,123"></ListView>
+        </Grid>
+    </DockPanel>
 </Window>
