@@ -7,4 +7,24 @@
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Remove="Continue.png" />
+    <None Remove="Link.png" />
+    <None Remove="Menu.png" />
+    <None Remove="Translate.png" />
+    <None Remove="Undo.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Resources\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Continue.png" />
+    <Resource Include="Link.png" />
+    <Resource Include="Menu.png" />
+    <Resource Include="Translate.png" />
+    <Resource Include="Undo.png" />
+  </ItemGroup>
+
 </Project>

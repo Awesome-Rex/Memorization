@@ -4,7 +4,6 @@ C:\Users\force\OneDrive\Documents\Memorization\Taekwondo Practice\bin\Debug\netc
 C:\Users\force\OneDrive\Documents\Memorization\Taekwondo Practice\bin\Debug\netcoreapp3.1\Taekwondo Practice.runtimeconfig.dev.json
 C:\Users\force\OneDrive\Documents\Memorization\Taekwondo Practice\bin\Debug\netcoreapp3.1\Taekwondo Practice.dll
 C:\Users\force\OneDrive\Documents\Memorization\Taekwondo Practice\bin\Debug\netcoreapp3.1\Taekwondo Practice.pdb
-C:\Users\force\OneDrive\Documents\Memorization\Taekwondo Practice\obj\Debug\netcoreapp3.1\Taekwondo Practice.csprojAssemblyReference.cache
 C:\Users\force\OneDrive\Documents\Memorization\Taekwondo Practice\obj\Debug\netcoreapp3.1\MainWindow.g.cs
 C:\Users\force\OneDrive\Documents\Memorization\Taekwondo Practice\obj\Debug\netcoreapp3.1\App.g.cs
 C:\Users\force\OneDrive\Documents\Memorization\Taekwondo Practice\obj\Debug\netcoreapp3.1\Taekwondo Practice_MarkupCompile.cache
@@ -15,3 +14,4 @@ C:\Users\force\OneDrive\Documents\Memorization\Taekwondo Practice\obj\Debug\netc
 C:\Users\force\OneDrive\Documents\Memorization\Taekwondo Practice\obj\Debug\netcoreapp3.1\Taekwondo Practice.AssemblyInfo.cs
 C:\Users\force\OneDrive\Documents\Memorization\Taekwondo Practice\obj\Debug\netcoreapp3.1\Taekwondo Practice.dll
 C:\Users\force\OneDrive\Documents\Memorization\Taekwondo Practice\obj\Debug\netcoreapp3.1\Taekwondo Practice.pdb
+C:\Users\force\OneDrive\Documents\Memorization\Taekwondo Practice\obj\Debug\netcoreapp3.1\Taekwondo Practice.csprojAssemblyReference.cache

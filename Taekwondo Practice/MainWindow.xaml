@@ -5,20 +5,136 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Taekwondo_Practice"
         mc:Ignorable="d"
-        Title="MainWindow" Height="750" Width="1200" WindowState="Maximized">
-    <DockPanel LastChildFill="False">
-        <Menu DockPanel.Dock="Top" Foreground="Black">
+        Title="Taekwondo" Height="750" Width="1200" WindowState="Maximized" MouseLeftButtonDown="Window_MouseLeftButtonDown" MouseMove="Window_MouseMove">
+    <DockPanel LastChildFill="True" Background="Yellow">
+        <!--<Menu DockPanel.Dock="Top" Foreground="Black" Height="25">
             <Menu.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="#FF888888"/>
                     <GradientStop Color="#FF686868" Offset="1"/>
                 </LinearGradientBrush>
             </Menu.Background>
-            <MenuItem Header="_File"/>
-            <MenuItem Header="_Settings"/>
-        </Menu>
-        <Grid DockPanel.Dock="Left" Width="300" Background="#FF1F1F1F">
-            <ListView Width="300" Margin="0,60,0,123"></ListView>
+            <MenuItem Header="_File" FontSize="15" Height="25"/>
+            <MenuItem Header="_Settings" FontSize="15" Height="25"/>
+        </Menu>-->
+        <Grid DockPanel.Dock="Top" Background="Red" Height="5">
+            <Rectangle Fill="Black" HorizontalAlignment="Left" Width="20" Margin="150,0,0,0" />
+            <Rectangle Fill="Black" HorizontalAlignment="Right" Width="20" Margin="0,0,150,0"/>
+        </Grid>
+        <Grid x:Name="SidePanel" DockPanel.Dock="Left" Width="300" Background="#FF3F3F3F">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="120"/>
+            </Grid.RowDefinitions>
+
+            <Grid Grid.Row="0">
+                <Label Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Segoe UI" FontSize="30">Session Structure</Label>
+            </Grid>
+            <Grid Grid.Row="1">
+                <ListView Grid.Row="1" Background="{x:Null}">
+
+                </ListView>
+                <Border Background="#FF292929" ClipToBounds="True">
+                    <Border Background="Transparent" BorderBrush="Black" BorderThickness="10" Margin="-10">
+                        <Border.Effect>
+                            <DropShadowEffect ShadowDepth="0" BlurRadius="30"/>
+                        </Border.Effect>
+                    </Border>
+                </Border>
+            </Grid>
+            <Grid Grid.Row="2" Background="#FF3F3F3F">
+                <StackPanel Margin="15,10,15,10">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition></ColumnDefinition>
+                            <ColumnDefinition Width="{Binding ActualHeight, ElementName=AddButton, Mode=OneWay}"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+
+                        <ComboBox Grid.Column="0" FontSize="20" BorderBrush="#FFACACAC" Background="#FFCDCDCD">
+                            <ComboBoxItem Content="Warm Up" IsSelected="True" Background="#FF4B4B4B"/>
+                            <ComboBoxItem Content="Technique" Background="#FF4B4B4B"/>
+                            <ComboBoxItem Content="Patterns" Background="#FF4B4B4B"/>
+                            <ComboBoxItem Content="Sparring" Background="#FF4B4B4B"/>
+                            <ComboBoxItem Content="3 Step Sparring" Background="#FF4B4B4B"/>
+                            <ComboBoxItem Content="Self Defence" Background="#FF4B4B4B"/>
+                            <ComboBoxItem Content="Theory" Background="#FF4B4B4B"/>
+                            <ComboBoxItem Content="Oath" Background="#FF4B4B4B"/>
+                        </ComboBox>
+                        <Button Name="AddButton" Grid.Column="1" Content="+" Background="#FF979797" BorderBrush="{x:Null}"/>
+                    </Grid>
+                </StackPanel>
+
+            </Grid>
+        </Grid>
+        <Grid DockPanel.Dock="Bottom" Height="100">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="40"/>
+            </Grid.RowDefinitions>
+
+            <UniformGrid Grid.Row="0" Rows="1">
+                <Button FontSize="40" BorderBrush="{x:Null}" Height="60" VerticalAlignment="Top">
+                    <Button.Background>
+                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                            <GradientStop Color="#FF7F7F7F"/>
+                            <GradientStop Color="#FF5A5A5A" Offset="1"/>
+                        </LinearGradientBrush>
+                    </Button.Background>
+                    <Image Source="Undo.png" Height="40" OpacityMask="#FF292929"/>
+                </Button>
+                <Button ToolTip="Continue" FontSize="40" BorderBrush="{x:Null}">
+                    <Button.Background>
+                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                            <GradientStop Color="#FF7F7F7F"/>
+                            <GradientStop Color="#FF5A5A5A" Offset="1"/>
+                        </LinearGradientBrush>
+                    </Button.Background>
+                    <Image Source="Continue.png" Height="40" OpacityMask="#FF292929"/>
+                </Button>
+            </UniformGrid>
+            <Grid Grid.Row="1">
+                <UniformGrid Rows="1">
+                    <Grid>
+                        <Button ToolTip="Menu" Grid.Column="0" FontSize="40" BorderBrush="{x:Null}">
+                            <Button.Background>
+                                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                    <GradientStop Color="#FF7F7F7F"/>
+                                    <GradientStop Color="#FF5A5A5A" Offset="1"/>
+                                </LinearGradientBrush>
+                            </Button.Background>
+                            <Image Source="Menu.png" Height="30" OpacityMask="#FF292929"/>
+                        </Button>
+                    </Grid>
+                    <Grid>
+                        <Button ToolTip="Translate to English" Grid.Column="0" FontSize="40" BorderBrush="{x:Null}">
+                            <Button.Background>
+                                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                    <GradientStop Color="#FF7F7F7F"/>
+                                    <GradientStop Color="#FF5A5A5A" Offset="1"/>
+                                </LinearGradientBrush>
+                            </Button.Background>
+                            <Image Source="Translate.png" Height="30" OpacityMask="#FF292929"/>
+                        </Button>
+                    </Grid>
+                    <Grid>
+                        <Button ToolTip="More info" Grid.Column="0" FontSize="40" BorderBrush="{x:Null}">
+                            <Button.Background>
+                                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                    <GradientStop Color="#FF7F7F7F"/>
+                                    <GradientStop Color="#FF5A5A5A" Offset="1"/>
+                                </LinearGradientBrush>
+                            </Button.Background>
+                            <Image Source="Link.png" Height="30" OpacityMask="#FF292929"/>
+                        </Button>
+                    </Grid>
+                </UniformGrid>
+            </Grid>
+        </Grid>
+
+        <Grid x:Name="Content">
+            <Rectangle x:Name="ExposeSidePanel" MouseLeftButtonUp="ExposeSidePanel_MouseLeftButtonUp" MouseLeftButtonDown="ExposeSidePanel_MouseLeftButtonDown" DockPanel.Dock="Left" Width="20" HorizontalAlignment="Left" Height="150" VerticalAlignment="Center" Fill="#FF979797"/>
+            <Grid HorizontalAlignment="Right" Width="900"/>
         </Grid>
     </DockPanel>
 </Window>
