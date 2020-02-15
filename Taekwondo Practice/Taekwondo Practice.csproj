@@ -17,6 +17,7 @@
 
   <ItemGroup>
     <Folder Include="Resources\" />
+    <Folder Include="Scripts\ViewModel\" />
   </ItemGroup>
 
   <ItemGroup>
