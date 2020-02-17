@@ -6,8 +6,10 @@ C:\Users\force\OneDrive\Documents\Memorization\Taekwondo Practice\bin\Debug\netc
 C:\Users\force\OneDrive\Documents\Memorization\Taekwondo Practice\bin\Debug\netcoreapp3.1\Taekwondo Practice.pdb
 C:\Users\force\OneDrive\Documents\Memorization\Taekwondo Practice\obj\Debug\netcoreapp3.1\MainWindow.g.cs
 C:\Users\force\OneDrive\Documents\Memorization\Taekwondo Practice\obj\Debug\netcoreapp3.1\App.g.cs
+C:\Users\force\OneDrive\Documents\Memorization\Taekwondo Practice\obj\Debug\netcoreapp3.1\GeneratedInternalTypeHelper.g.cs
 C:\Users\force\OneDrive\Documents\Memorization\Taekwondo Practice\obj\Debug\netcoreapp3.1\Taekwondo Practice_MarkupCompile.cache
 C:\Users\force\OneDrive\Documents\Memorization\Taekwondo Practice\obj\Debug\netcoreapp3.1\Taekwondo Practice_MarkupCompile.lref
+C:\Users\force\OneDrive\Documents\Memorization\Taekwondo Practice\obj\Debug\netcoreapp3.1\App.baml
 C:\Users\force\OneDrive\Documents\Memorization\Taekwondo Practice\obj\Debug\netcoreapp3.1\MainWindow.baml
 C:\Users\force\OneDrive\Documents\Memorization\Taekwondo Practice\obj\Debug\netcoreapp3.1\Taekwondo Practice.g.resources
 C:\Users\force\OneDrive\Documents\Memorization\Taekwondo Practice\obj\Debug\netcoreapp3.1\Taekwondo Practice.AssemblyInfoInputs.cache

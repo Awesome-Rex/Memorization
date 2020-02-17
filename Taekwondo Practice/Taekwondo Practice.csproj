@@ -16,11 +16,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Resources\" />
-    <Folder Include="Scripts\ViewModel\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <Resource Include="Continue.png" />
     <Resource Include="Link.png" />
     <Resource Include="Menu.png" />

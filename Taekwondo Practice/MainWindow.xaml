@@ -3,132 +3,275 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:Taekwondo_Practice"
+        xmlns:local="clr-namespace:Taekwondo_Practice.Resources.Scripts.ViewModel.Converters"
         mc:Ignorable="d"
+        
         Title="Taekwondo" Height="750" Width="1200" WindowState="Maximized" MouseLeftButtonDown="Window_MouseLeftButtonDown" MouseMove="Window_MouseMove">
+    <Window.Resources>
+        <local:MathConverter x:Key="MathConverter"/>
+
+        <Style TargetType="Button" x:Key="InteractionNavigation">
+            <Setter Property="Background" Value="#FF858585"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="FontFamily" Value="Song Myung"/>
+            <Setter Property="HorizontalAlignment" Value="Stretch"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border x:Name="Blur" ClipToBounds="True">
+                            <Grid x:Name="Fill" Background="{TemplateBinding Background}" Margin="0">
+                                <!--ContentPresenter Content="{TemplateBinding Content}"></>-->
+                                <Label x:Name="NavText" FontSize="{Binding ElementName=Fill, Path=ActualHeight, Converter={StaticResource MathConverter}, ConverterParameter=@VALUE*0.8}" Content="{TemplateBinding Content}" FontFamily="Song Myung" Foreground="White" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+                                <Rectangle x:Name="Mask" Fill="Black" Opacity="0"/>
+                            </Grid>
+                            <Border.Effect>
+                                <BlurEffect Radius="0" KernelType="Gaussian"/>
+                            </Border.Effect>
+                        </Border>
+
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsEnabled" Value="False">
+                                <Setter TargetName="Mask" Property="Opacity" Value="0.5"/>
+                                <Setter TargetName="Blur" Property="Effect">
+                                    <Setter.Value>
+                                        <BlurEffect Radius="10" KernelType="Gaussian"/>
+                                    </Setter.Value>
+                                </Setter>
+                            </Trigger>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="Fill" Property="Background" Value="#FF6F6F6F"/>
+                            </Trigger>
+                            <Trigger Property="IsPressed" Value="True">
+                                <Setter TargetName="NavText" Property="FontSize" Value="{Binding ElementName=Fill, Path=ActualHeight, Converter={StaticResource MathConverter}, ConverterParameter=@VALUE*0.6}"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <Style TargetType="Button" x:Key="InteractionExtra">
+            <Setter Property="Background" Value="#FF858585"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="FontFamily" Value="Song Myung"/>
+            <Setter Property="HorizontalAlignment" Value="Stretch"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border x:Name="Blur" ClipToBounds="True">
+                            <Grid x:Name="Fill" Background="{TemplateBinding Background}" Margin="0">
+                                <!--<Image Source="{TemplateBinding Content}" Height="25" x:Name="Icon"/>-->
+                                <ContentPresenter x:Name="Icon" Content="{TemplateBinding Content}" Height="25"/>
+                                <Rectangle x:Name="Mask" Fill="Black" Opacity="0"/>
+                            </Grid>
+                            <Border.Effect>
+                                <BlurEffect Radius="0" KernelType="Gaussian"/>
+                            </Border.Effect>
+                        </Border>
+
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsEnabled" Value="False">
+                                <Setter TargetName="Mask" Property="Opacity" Value="0.5"/>
+                                <Setter TargetName="Blur" Property="Effect">
+                                    <Setter.Value>
+                                        <BlurEffect Radius="10" KernelType="Gaussian"/>
+                                    </Setter.Value>
+                                </Setter>
+                            </Trigger>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="Fill" Property="Background" Value="#FF6F6F6F"/>
+                            </Trigger>
+                            <Trigger Property="IsPressed" Value="True">
+                                <Setter TargetName="Icon" Property="Height" Value="20"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
+
     <Grid>
         <DockPanel x:Name="TrainingView" LastChildFill="True" Background="Yellow" Visibility="Visible">
-            <Grid DockPanel.Dock="Top" Background="Red" Height="5" Visibility="Visible">
+            <Grid x:Name="Belt" DockPanel.Dock="Top" Background="Red" Height="3" Visibility="Visible">
                 <Rectangle Fill="Black" HorizontalAlignment="Left" Width="20" Margin="150,0,0,0" />
                 <Rectangle Fill="Black" HorizontalAlignment="Right" Width="20" Margin="0,0,150,0"/>
             </Grid>
-            <Grid x:Name="SidePanel" DockPanel.Dock="Left" Width="300" Background="#FF3F3F3F">
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="50"/>
-                    <RowDefinition Height="*"/>
-                    <RowDefinition Height="120"/>
-                </Grid.RowDefinitions>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="350" MaxWidth="500"/>
+                    <ColumnDefinition Width="2"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
 
-                <Grid Grid.Row="0">
-                    <Label Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Segoe UI" FontSize="30">Session Structure</Label>
+                <Grid Grid.Column="0" x:Name="SidePanel" Background="#FF3F3F3F">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="50"/>
+                        <RowDefinition Height="*" MinHeight="200"/>
+                        <RowDefinition Height="2"/>
+                        <RowDefinition Height="200"/>
+                    </Grid.RowDefinitions>
+
+                    <Grid Grid.Row="0">
+                        <Label Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Segoe UI" FontSize="30" Content="Session Structure"/>
+                    </Grid>
+                    <Grid Grid.Row="1">
+                        <ScrollViewer VerticalScrollBarVisibility="Hidden" CanContentScroll="True">
+                            <Grid>
+                                <ListView Grid.Row="1" Background="{x:Null}"/>
+                                <Border Background="#FF292929" ClipToBounds="True">
+                                    <Border Background="Transparent" BorderBrush="Black" BorderThickness="10" Margin="-10">
+                                        <Border.Effect>
+                                            <DropShadowEffect ShadowDepth="0" BlurRadius="30"/>
+                                        </Border.Effect>
+                                    </Border>
+                                </Border>
+                            </Grid>
+                        </ScrollViewer>
+                    </Grid>
+
+                    <GridSplitter Grid.Row="2" HorizontalAlignment="Stretch" Background="Black"/>
+
+                    <Grid Grid.Row="3" Background="#FF3F3F3F">
+                        <ScrollViewer VerticalScrollBarVisibility="Hidden" CanContentScroll="True">
+                            <StackPanel Margin="15,10,15,10">
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="{Binding ActualHeight, ElementName=AddButton, Mode=OneWay}"/>
+                                    </Grid.ColumnDefinitions>
+
+                                    <ComboBox Grid.Column="0" FontSize="20" BorderBrush="#FFACACAC" Background="#FFCDCDCD">
+                                        <ComboBoxItem Content="Warm Up" IsSelected="True" Background="#FF4B4B4B"/>
+                                        <ComboBoxItem Content="Patterns" Background="#FF4B4B4B"/>
+                                        <ComboBoxItem Content="Sparring" Background="#FF4B4B4B"/>
+                                        <ComboBoxItem Content="3 Step Sparring" Background="#FF4B4B4B"/>
+                                        <ComboBoxItem Content="Self Defence" Background="#FF4B4B4B"/>
+                                        <ComboBoxItem Content="Theory" Background="#FF4B4B4B"/>
+                                        <ComboBoxItem Content="Oath" Background="#FF4B4B4B"/>
+                                    </ComboBox>
+                                    <Button x:Name="AddButton" Grid.Column="1" Content="+" Background="#FF979797"/>
+                                </Grid>
+                                <Grid Margin="0,15,0,0">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="Auto"/>
+                                        <ColumnDefinition Width="*"/>
+                                    </Grid.ColumnDefinitions>
+
+                                    <Label Grid.Column="0" Foreground="White" FontSize="20" Content="Difficulty"/>
+                                    <ComboBox Grid.Column="1" FontSize="20" BorderBrush="#FFACACAC" Background="#FFCDCDCD">
+                                        <ComboBoxItem ToolTip="Useful for readjusting to new rank or after extended absence.">Ease in</ComboBoxItem>
+                                        <ComboBoxItem ToolTip="Useful for a normal training." IsSelected="True">Normal</ComboBoxItem>
+                                        <ComboBoxItem ToolTip="Useful for preparing for a test or tournament.">Test Preparation</ComboBoxItem>
+                                    </ComboBox>
+                                </Grid>
+                                <Grid Margin="0,15,0,0">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="Auto"/>
+                                        <ColumnDefinition Width="*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="Auto"/>
+                                    </Grid.RowDefinitions>
+
+                                    <Label Grid.Column="0" Grid.Row="0" Foreground="White" FontSize="20" Content="Rank"/>
+                                    <ComboBox Grid.Column="1" Grid.Row="0"/>
+                                    <TextBlock MinWidth="200" Grid.Column="1" Grid.Row="1" Foreground="White" FontSize="12" TextWrapping="Wrap"><Run Text="White belt signifies innocence, no prior knowledge of Taekwondo as that of a beginner student."/></TextBlock>
+                                </Grid>
+                                <Grid Margin="0,50,0,0">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="Auto"/>
+                                        <ColumnDefinition Width="*"/>
+                                    </Grid.ColumnDefinitions>
+
+                                    <Label Grid.Column="0" Foreground="White" FontSize="20" Content="Presets" ToolTip="Add pre-made sessions. Recomemended for users not yet familier with how to use this application."/>
+                                    <ComboBox Grid.Column="1" FontSize="20" BorderBrush="#FFACACAC" Background="#FFCDCDCD">
+                                        <ComboBoxItem ToolTip="Useful in a tight schedule before training.">Quick Session (6 min)</ComboBoxItem>
+                                        <ComboBoxItem ToolTip="Recommended preset to use before training." IsSelected="True">Average Session (9 min)</ComboBoxItem>
+                                        <ComboBoxItem ToolTip="Simulates a real Taekwondo class.">Full Session (12 min+)</ComboBoxItem>
+                                    </ComboBox>
+                                </Grid>
+                            </StackPanel>
+                        </ScrollViewer>
+                    </Grid>
                 </Grid>
-                <Grid Grid.Row="1">
-                    <ListView Grid.Row="1" Background="{x:Null}">
+                <GridSplitter Grid.Column="1" HorizontalAlignment="Stretch" Background="Black"/>
+                <Grid x:Name="NavigationViewControl" Grid.Column="2">
+                    <DockPanel LastChildFill="True">
+                        <!--<Rectangle x:Name="ExposeSidePanel" MouseLeftButtonUp="ExposeSidePanel_MouseLeftButtonUp" MouseLeftButtonDown="ExposeSidePanel_MouseLeftButtonDown" Fill="#FF979797" Width="20" Visibility="Collapsed" IsEnabled="False"/>-->
 
-                    </ListView>
-                    <Border Background="#FF292929" ClipToBounds="True">
-                        <Border Background="Transparent" BorderBrush="Black" BorderThickness="10" Margin="-10">
-                            <Border.Effect>
-                                <DropShadowEffect ShadowDepth="0" BlurRadius="30"/>
-                            </Border.Effect>
-                        </Border>
-                    </Border>
+                        <Grid x:Name="NavigationButtons" DockPanel.Dock="Bottom" Height="100" Background="#FF858585">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="40"/>
+                            </Grid.RowDefinitions>
+
+                            <UniformGrid Grid.Row="0" Rows="1">
+                                <Button Style="{StaticResource InteractionNavigation}" ToolTip="Undo" BorderBrush="{x:Null}" HorizontalContentAlignment="Center" VerticalContentAlignment="Center">
+                                    <!--<Image Source="Undo.png" Height="40" OpacityMask="#FF292929"/>-->
+                                    뒤
+                                </Button>
+                                <Button Style="{StaticResource InteractionNavigation}" ToolTip="Continue" BorderBrush="{x:Null}" HorizontalContentAlignment="Center" VerticalContentAlignment="Center">
+                                    <!--<Image Source="Continue.png" Height="40" OpacityMask="#FF292929"/>-->
+                                    계속하다
+                                </Button>
+                            </UniformGrid>
+                            <UniformGrid Grid.Row="1" Rows="1">
+                                <Grid>
+                                    <Button Style="{StaticResource InteractionExtra}" ToolTip="Menu" Grid.Column="0" BorderBrush="{x:Null}" HorizontalContentAlignment="Center" VerticalContentAlignment="Center">
+                                        <!--집-->
+                                        <Image Source="Menu.png" Height="25" OpacityMask="#FF292929"/>
+                                        <!--Menu.png-->
+                                    </Button>
+                                </Grid>
+                                <Grid>
+                                    <Button Style="{StaticResource InteractionExtra}" ToolTip="Used to translate to English or provide forgotten info" Grid.Column="0" BorderBrush="{x:Null}" HorizontalContentAlignment="Center" VerticalContentAlignment="Center">
+                                        <!--도움-->
+                                        <Image Source="Translate.png" Height="25" OpacityMask="#FF292929"/>
+                                        <!--Translate.png-->
+                                    </Button>
+                                </Grid>
+                                <Grid>
+                                    <Button Style="{StaticResource InteractionExtra}" ToolTip="More info" Grid.Column="0" BorderBrush="{x:Null}" HorizontalContentAlignment="Center" VerticalContentAlignment="Center">
+                                        <!--추가 정보-->
+                                        <Image Source="Link.png" Height="25" OpacityMask="#FF292929"/>
+                                        <!--Link.png-->
+                                    </Button>
+                                </Grid>
+                            </UniformGrid>
+                        </Grid>
+
+                        <Grid x:Name="Contents">
+                            <Grid Name="TranslateView">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="*"/>
+                                    <RowDefinition Height="10"/>
+                                    <RowDefinition Height="120"/>
+                                </Grid.RowDefinitions>
+
+                                <Grid></Grid>
+
+                                <GridSplitter Grid.Row="1" HorizontalAlignment="Stretch" Visibility="Visible" IsHitTestVisible="True" Background="Transparent"/>
+
+                                <Grid Grid.Row="2">
+                                    <Grid.Background>
+                                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                            <GradientStop Color="#7F595500" Offset="1"/>
+                                            <GradientStop Color="Transparent" Offset="0.322"/>
+                                        </LinearGradientBrush>
+                                    </Grid.Background>
+                                </Grid>
+                            </Grid>
+                            <Grid Name="CountdownView">
+
+                            </Grid>
+                        </Grid>
+                    </DockPanel>
                 </Grid>
-                <Grid Grid.Row="2" Background="#FF3F3F3F">
-                    <StackPanel Margin="15,10,15,10">
-                        <Grid>
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition></ColumnDefinition>
-                                <ColumnDefinition Width="{Binding ActualHeight, ElementName=AddButton, Mode=OneWay}"></ColumnDefinition>
-                            </Grid.ColumnDefinitions>
-
-                            <ComboBox Grid.Column="0" FontSize="20" BorderBrush="#FFACACAC" Background="#FFCDCDCD">
-                                <ComboBoxItem Content="Warm Up" IsSelected="True" Background="#FF4B4B4B"/>
-                                <ComboBoxItem Content="Technique" Background="#FF4B4B4B"/>
-                                <ComboBoxItem Content="Patterns" Background="#FF4B4B4B"/>
-                                <ComboBoxItem Content="Sparring" Background="#FF4B4B4B"/>
-                                <ComboBoxItem Content="3 Step Sparring" Background="#FF4B4B4B"/>
-                                <ComboBoxItem Content="Self Defence" Background="#FF4B4B4B"/>
-                                <ComboBoxItem Content="Theory" Background="#FF4B4B4B"/>
-                                <ComboBoxItem Content="Oath" Background="#FF4B4B4B"/>
-                            </ComboBox>
-                            <Button Name="AddButton" Grid.Column="1" Content="+" Background="#FF979797" BorderBrush="{x:Null}"/>
-                        </Grid>
-                    </StackPanel>
-
-                </Grid>
-            </Grid>
-            <Grid DockPanel.Dock="Bottom" Height="100">
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="*"/>
-                    <RowDefinition Height="40"/>
-                </Grid.RowDefinitions>
-
-                <UniformGrid Grid.Row="0" Rows="1">
-                    <Button FontSize="40" BorderBrush="{x:Null}" Height="60" VerticalAlignment="Top">
-                        <Button.Background>
-                            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                                <GradientStop Color="#FF7F7F7F"/>
-                                <GradientStop Color="#FF5A5A5A" Offset="1"/>
-                            </LinearGradientBrush>
-                        </Button.Background>
-                        <Image Source="Undo.png" Height="40" OpacityMask="#FF292929"/>
-                    </Button>
-                    <Button ToolTip="Continue" FontSize="40" BorderBrush="{x:Null}">
-                        <Button.Background>
-                            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                                <GradientStop Color="#FF7F7F7F"/>
-                                <GradientStop Color="#FF5A5A5A" Offset="1"/>
-                            </LinearGradientBrush>
-                        </Button.Background>
-                        <Image Source="Continue.png" Height="40" OpacityMask="#FF292929"/>
-                    </Button>
-                </UniformGrid>
-                <Grid Grid.Row="1">
-                    <UniformGrid Rows="1">
-                        <Grid>
-                            <Button ToolTip="Menu" Grid.Column="0" FontSize="40" BorderBrush="{x:Null}">
-                                <Button.Background>
-                                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                                        <GradientStop Color="#FF7F7F7F"/>
-                                        <GradientStop Color="#FF5A5A5A" Offset="1"/>
-                                    </LinearGradientBrush>
-                                </Button.Background>
-                                <Image Source="Menu.png" Height="30" OpacityMask="#FF292929"/>
-                            </Button>
-                        </Grid>
-                        <Grid>
-                            <Button ToolTip="Translate to English" Grid.Column="0" FontSize="40" BorderBrush="{x:Null}">
-                                <Button.Background>
-                                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                                        <GradientStop Color="#FF7F7F7F"/>
-                                        <GradientStop Color="#FF5A5A5A" Offset="1"/>
-                                    </LinearGradientBrush>
-                                </Button.Background>
-                                <Image Source="Translate.png" Height="30" OpacityMask="#FF292929"/>
-                            </Button>
-                        </Grid>
-                        <Grid>
-                            <Button ToolTip="More info" Grid.Column="0" FontSize="40" BorderBrush="{x:Null}">
-                                <Button.Background>
-                                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                                        <GradientStop Color="#FF7F7F7F"/>
-                                        <GradientStop Color="#FF5A5A5A" Offset="1"/>
-                                    </LinearGradientBrush>
-                                </Button.Background>
-                                <Image Source="Link.png" Height="30" OpacityMask="#FF292929"/>
-                            </Button>
-                        </Grid>
-                    </UniformGrid>
-                </Grid>
-            </Grid>
-
-            <Grid x:Name="Content">
-                <Rectangle x:Name="ExposeSidePanel" MouseLeftButtonUp="ExposeSidePanel_MouseLeftButtonUp" MouseLeftButtonDown="ExposeSidePanel_MouseLeftButtonDown" DockPanel.Dock="Left" Width="20" HorizontalAlignment="Left" Height="150" VerticalAlignment="Center" Fill="#FF979797"/>
-                <Grid HorizontalAlignment="Right" Width="900"/>
             </Grid>
         </DockPanel>
-        <DockPanel x:Name="FocusView" Background="Black" Visibility="Collapsed" ScrollViewer.VerticalScrollBarVisibility="Disabled">
+        <DockPanel x:Name="FocusView" Background="Black" Visibility="Collapsed" ScrollViewer.VerticalScrollBarVisibility="Disabled" d:IsLocked="True">
             <Grid DockPanel.Dock="Bottom" Height="20" VerticalAlignment="Bottom">
                 <Button FontSize="40" BorderBrush="{x:Null}">
                     <Button.Background>
@@ -140,6 +283,6 @@
                 </Button>
             </Grid>
         </DockPanel>
-        <Grid Name="Overlay" Background="Transparent"></Grid>
+        <Grid Name="Overlay" Background="#00000000" Visibility="Collapsed" d:IsLocked="True"/>
     </Grid>
 </Window>

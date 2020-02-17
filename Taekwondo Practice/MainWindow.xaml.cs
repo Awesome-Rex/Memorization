@@ -46,11 +46,16 @@ namespace Taekwondo_Practice
 
         private void Window_MouseMove(object sender, MouseEventArgs e)
         {
+
+        }
+
+        /*private void Window_MouseMove(object sender, MouseEventArgs e)
+        {
             if (draggedControl != null && e.LeftButton == MouseButtonState.Pressed)
             {
                 if (draggedControl == ExposeSidePanel)
                 {
-                    SidePanel.Width = Math.Clamp(initialValue + (e.GetPosition(this) - initialMouseClick).X, 0, 400);
+                    SidePanel.Width = Math.Clamp(initialValue + (e.GetPosition(this) - initialMouseClick).X, 0, 450);
                     Console.WriteLine((initialMouseClick - e.GetPosition(this)).X.ToString());
                 }
             } else if (draggedControl != null && e.LeftButton == MouseButtonState.Released)
@@ -127,6 +132,6 @@ namespace Taekwondo_Practice
                     previousValues.Remove(SidePanel.Name + "_w");
                 }
             }
-        }
+        }*/
     }
 }
