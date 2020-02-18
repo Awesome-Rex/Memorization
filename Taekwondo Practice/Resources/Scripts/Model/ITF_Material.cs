@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 using System.Windows.Media;
 
@@ -66,7 +67,7 @@ namespace ITF_Material
 
     namespace A //Actions
     {
-        public class Stance : INamed, IRanked
+        /*public class Stance : INamed, IRanked
         {
             public string name { get; set; }
             public int minRank { get; set; }
@@ -118,6 +119,72 @@ namespace ITF_Material
                 this.name = name;
                 this.minRank = minRank;
             }
+
+            public string[] generateCombinations();
+        }*/
+
+        public class Move : INamed, IRanked
+        {
+            public string name { get; set; }
+            public int minRank { get; set; }
+
+            public object[] template;
+
+            public List<string> combinations;
+
+            public Move (dynamic[] template, string name, int minRank)
+            {
+                this.name = name;
+                this.minRank = minRank;
+
+                this.template = template;
+
+                this.combinations = new List<string>();
+            }
+
+            public void generateCombinations ()
+            {
+                combinationCycle(new List<string>(), 0);
+            }
+
+            public void combinationCycle (List<string> newComb, int index)
+            {
+                List<string> newCombination = newComb;
+
+                for (int i = index; i < template.Length; i++)
+                {
+                    object word = template[i];
+
+                    if (word.GetType().IsArray)
+                    {
+
+
+                        foreach (Action possibility in (word as IEnumerable<Action>))
+                        {
+                            List<string> tempNewComb = newCombination;
+                            tempNewComb.Add((word as INamed).name);
+
+                            combinationCycle(tempNewComb, i + 1);
+                        }
+
+                        return;
+                    }
+                    else if (word is INamed && word is IRanked)
+                    {
+                        newCombination.Add((word as INamed).name);
+                    }
+                }
+
+                combinations.Add(newCombination.Aggregate((a, b) => a + " " + b));
+            }
+        }
+
+        public class Action : INamed, IRanked
+        {
+            public string name { get; set; }
+            public int minRank { get; set; }
+
+
         }
 
         public class Excercise : INamed
@@ -187,6 +254,11 @@ namespace ITF_Material
     public interface IRanked
     {
         public int minRank { get; set; }
+    }
+
+    public class Ranked : IRanked
+    {
+        public int minRank { }
     }
 
     public static class TechniqueGenerator
