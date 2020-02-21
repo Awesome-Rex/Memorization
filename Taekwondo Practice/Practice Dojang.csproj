@@ -23,4 +23,8 @@
     <Resource Include="Undo.png" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Resources\Scripts\Views\TrainingCommands\" />
+  </ItemGroup>
+
 </Project>

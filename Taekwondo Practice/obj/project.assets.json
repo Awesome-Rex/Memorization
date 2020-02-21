@@ -14,9 +14,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\force\\OneDrive\\Documents\\Memorization\\Taekwondo Practice\\Taekwondo Practice.csproj",
-      "projectName": "Taekwondo Practice",
-      "projectPath": "C:\\Users\\force\\OneDrive\\Documents\\Memorization\\Taekwondo Practice\\Taekwondo Practice.csproj",
+      "projectUniqueName": "C:\\Users\\force\\OneDrive\\Documents\\Memorization\\Taekwondo Practice\\Practice Dojang.csproj",
+      "projectName": "Practice Dojang",
+      "projectPath": "C:\\Users\\force\\OneDrive\\Documents\\Memorization\\Taekwondo Practice\\Practice Dojang.csproj",
       "packagesPath": "C:\\Users\\force\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\force\\OneDrive\\Documents\\Memorization\\Taekwondo Practice\\obj\\",
       "projectStyle": "PackageReference",

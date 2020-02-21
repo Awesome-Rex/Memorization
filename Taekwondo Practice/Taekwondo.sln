@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
+# Blend for Visual Studio Version 16
 VisualStudioVersion = 16.0.29728.190
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Taekwondo Practice", "Taekwondo Practice.csproj", "{7F4F5BE8-FBD3-41F7-ADED-5A02F6ED779B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Practice Dojang", "Practice Dojang.csproj", "{7F4F5BE8-FBD3-41F7-ADED-5A02F6ED779B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
