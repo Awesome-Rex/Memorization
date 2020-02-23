@@ -1,11 +1,38 @@
 {
   "version": 3,
   "targets": {
-    ".NETCoreApp,Version=v3.1": {}
+    ".NETCoreApp,Version=v3.1": {
+      "CircularProgressBar/2.7.0.7": {
+        "type": "package",
+        "compile": {
+          "lib/net40/CircularProgressBar.dll": {}
+        },
+        "runtime": {
+          "lib/net40/CircularProgressBar.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "CircularProgressBar/2.7.0.7": {
+      "sha512": "6mK/G8BeU7/DYdNUHRkp7lSahmbbJLyN3VyUGH4S2SXeudiCDKmSS4XQcP6hE1bVyeQ94+nhA1NL45YWzUE3qg==",
+      "type": "package",
+      "path": "circularprogressbar/2.7.0.7",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "circularprogressbar.2.7.0.7.nupkg.sha512",
+        "circularprogressbar.nuspec",
+        "lib/net40/CircularProgressBar.dll",
+        "readme.txt"
+      ]
+    }
+  },
   "projectFileDependencyGroups": {
-    ".NETCoreApp,Version=v3.1": []
+    ".NETCoreApp,Version=v3.1": [
+      "CircularProgressBar >= 2.7.0.7"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\force\\.nuget\\packages\\": {},
@@ -48,6 +75,12 @@
     },
     "frameworks": {
       "netcoreapp3.1": {
+        "dependencies": {
+          "CircularProgressBar": {
+            "target": "Package",
+            "version": "[2.7.0.7, )"
+          }
+        },
         "imports": [
           "net461",
           "net462",
@@ -69,5 +102,17 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'CircularProgressBar 2.7.0.7' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework '.NETCoreApp,Version=v3.1'. This package may not be fully compatible with your project.",
+      "libraryId": "CircularProgressBar",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v3.1"
+      ]
+    }
+  ]
 }

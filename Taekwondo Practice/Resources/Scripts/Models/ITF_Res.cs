@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Media;
 using System.Threading;
+//using static ITF_Res.Material;
 
 namespace ITF_Res
 {
@@ -19,6 +20,8 @@ namespace ITF_Res
     {
         public int minRank { get; set; }
     }
+
+    public enum DifficultyLevel { Easy, Medium, Hard }
     #endregion
 
 
@@ -392,13 +395,13 @@ namespace ITF_Res
         };
     }
 
+    public abstract class Command
+    {
+        public abstract void Execute();
+    }
+
     public static class Commands
     {
-        public abstract class Command
-        {
-            public abstract void Execute();
-        }
-
         public static void bow ()
         {
 

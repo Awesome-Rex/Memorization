@@ -8,23 +8,44 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="Continue.png" />
-    <None Remove="Link.png" />
-    <None Remove="Menu.png" />
-    <None Remove="Translate.png" />
-    <None Remove="Undo.png" />
+    <None Remove="Resources\Fonts\Song_Myung\SongMyung-Regular.ttf" />
+    <None Remove="Resources\Icons\Continue.png" />
+    <None Remove="Resources\Icons\Link.png" />
+    <None Remove="Resources\Icons\Menu.png" />
+    <None Remove="Resources\Icons\TaekwondoIcons.svg" />
+    <None Remove="Resources\Icons\Translate.png" />
+    <None Remove="Resources\Icons\Undo.png" />
   </ItemGroup>
 
   <ItemGroup>
-    <Resource Include="Continue.png" />
-    <Resource Include="Link.png" />
-    <Resource Include="Menu.png" />
-    <Resource Include="Translate.png" />
-    <Resource Include="Undo.png" />
+    <Folder Include="Resources\Scripts\Views\Frames\" />
+    <Folder Include="Resources\Scripts\Views\UserControls\TrainingCommands\" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Resources\Scripts\Views\TrainingCommands\" />
+    <PackageReference Include="CircularProgressBar" Version="2.7.0.7" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="CircularProgressBar">
+      <HintPath>bin\Debug\netcoreapp3.1\CircularProgressBar.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Resources\Fonts\Song_Myung\SongMyung-Regular.ttf" />
+    <Resource Include="Resources\Icons\Continue.png" />
+    <Resource Include="Resources\Icons\Link.png" />
+    <Resource Include="Resources\Icons\Menu.png" />
+    <Resource Include="Resources\Icons\TaekwondoIcons.svg" />
+    <Resource Include="Resources\Icons\Translate.png" />
+    <Resource Include="Resources\Icons\Undo.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Resources\Fonts\Song_Myung\OFL.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 
 </Project>

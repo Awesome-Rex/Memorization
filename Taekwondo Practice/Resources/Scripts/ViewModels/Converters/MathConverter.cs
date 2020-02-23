@@ -49,7 +49,7 @@ namespace Taekwondo_Practice.Resources.Scripts.ViewModel.Converters
                 EvaluateMathString(ref mathEquation, ref numbers, 0);
 
                 // After parsing the numbers list should only have one value - the total
-                return (double)(numbers[0]);
+                return ((double)(numbers[0])).ToString();
             //}
         }
 
