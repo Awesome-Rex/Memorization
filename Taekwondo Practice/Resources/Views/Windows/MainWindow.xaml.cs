@@ -15,6 +15,7 @@ using System.Windows.Shapes;
 using System.Numerics;
 using System.Windows.Threading;
 using System.Windows.Media.Animation;
+using Taekwondo_Practice.Resources;
 
 namespace Taekwondo_Practice
 {
@@ -23,12 +24,11 @@ namespace Taekwondo_Practice
     /// </summary>
     public partial class MainWindow : Window
     {
-        
-
-
         public MainWindow()
         {
             InitializeComponent();
+
+            Subject.NavigationService.Navigate(new Resources.Views.Pages.Training());
         }
     }
 }

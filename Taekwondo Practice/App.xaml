@@ -1,12 +1,12 @@
 ﻿<Application x:Class="Taekwondo_Practice.App"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:local="clr-namespace:Taekwondo_Practice.Resources.Scripts.ViewModel.Converters"
-             StartupUri="Training.xaml">
+             xmlns:converter="clr-namespace:Taekwondo_Practice.Resources.Scripts.ViewModel.Converters"
+             StartupUri="Resources/Views/Windows/MainWindow.xaml">
     <Application.Resources>
 
-        <local:MathConverter x:Key="MathConverter"/>
-        <local:Multiplier x:Key="Multiply"/>
+        <converter:MathConverter x:Key="MathConverter"/>
+        <converter:Multiplier x:Key="Multiply"/>
 
         <Style TargetType="Label">
             <Setter Property="FontFamily" Value="Yu Gothic UI Semibold"/>

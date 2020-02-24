@@ -175,11 +175,15 @@ namespace ITF_Res
 
         public static void Load (string directory = @"/\/\")
         {
-            if (true) // directory doesnt exist
+            if (true) // specific files don't exist
             {
                 SET();
             }
-            else if (true) { // directory does exist
+            else if (true) // all files don't exist
+            {
+                SET();
+            }
+            else if (true) { // files do exist
                 //load from files
                 //set preferences (on current)
                 //set presets
