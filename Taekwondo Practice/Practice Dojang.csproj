@@ -22,6 +22,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Reference Include="CircularProgressBar">
       <HintPath>bin\Debug\netcoreapp3.1\CircularProgressBar.dll</HintPath>
     </Reference>

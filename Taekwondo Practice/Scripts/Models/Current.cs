@@ -7,6 +7,9 @@ using System.Xml.Serialization;
 
 using System.Runtime.Serialization;
 using System.Runtime.Serialization.Formatters.Binary;
+using System.Threading;
+using System.Xml;
+using Newtonsoft.Json;
 
 namespace ITF_Res
 {
@@ -50,6 +53,11 @@ namespace ITF_Res
         {
             throw new NotImplementedException();
         }
+
+        public Record(SerializationInfo info, StreamingContext ctxt)
+        {
+            throw new NotImplementedException();
+        }
     }
 
     [Serializable]
@@ -61,6 +69,11 @@ namespace ITF_Res
         }
 
         public void GetObjectData(SerializationInfo info, StreamingContext context)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Preferences(SerializationInfo info, StreamingContext ctxt)
         {
             throw new NotImplementedException();
         }
@@ -83,6 +96,11 @@ namespace ITF_Res
         }
 
         public void GetObjectData(SerializationInfo info, StreamingContext context)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Settings(SerializationInfo info, StreamingContext ctxt)
         {
             throw new NotImplementedException();
         }
@@ -110,6 +128,11 @@ namespace ITF_Res
         {
             throw new NotImplementedException();
         }
+
+        public TrainingPreset(SerializationInfo info, StreamingContext ctxt)
+        {
+            throw new NotImplementedException();
+        }
     }
     #endregion
 
@@ -120,22 +143,22 @@ namespace ITF_Res
         {
             get
             {
-                return Data.preferences;
+                return Data.preferences.value;
             }
             set
             {
-                Data.preferences = value;
+                Data.preferences.value = value;
             }
         }
         public static Settings settings
         {
             get
             {
-                return Data.settings;
+                return Data.settings.value;
             }
             set
             {
-                Data.settings = value;
+                Data.settings.value = value;
             }
         }
 
@@ -145,12 +168,12 @@ namespace ITF_Res
         #region "Adding to saved"
         public static void addRecord()
         {
-            Data.records.Add(record);
+            Data.records.value.Add(record);
         }
 
         public static void addPreset(string name)
         {
-            Data.presets.Add(new TrainingPreset(name, SessionStructure));
+            Data.presets.value.Add(new TrainingPreset(name, SessionStructure));
         }
         #endregion
 
@@ -158,7 +181,8 @@ namespace ITF_Res
         {
             foreach (Command strand in SessionStructure)
             {
-                strand.Execute();
+                Thread f = new Thread(strand.Execute);
+                f.Start();
             }
 
             EndSession();
@@ -166,40 +190,49 @@ namespace ITF_Res
 
         public static void EndSession ()
         {
+            //add record
             
         }
     }
 
     public static class Data
     {
-        public enum SerializeMethod { Byte, XML };
+        public enum SerializeMethod { Byte, XML, JSON };
 
-        public static List<Record> records;
-        public static Preferences preferences;
-        public static Settings settings;
-        public static List<TrainingPreset> presets;
-
-        public static List<Saved<List<Record>>> saves = new List<Saved<List<Record>>>
-        {
-            new Saved<List<Record>>(() => records, @"C:\REX_SaveFiles\YongGiPracticeDojang\Records.save", SerializeMethod.Byte, n => records = n)
-        };
+        public static Saved<List<Record>> records = new Saved<List<Record>>(@"C:\REX_Saves\YongGiPracticeDojang\Records.save", SerializeMethod.Byte);
+        public static Saved<Preferences> preferences = new Saved<Preferences>(@"C:\REX_Saves\YongGiPracticeDojang\Preferences.json", SerializeMethod.JSON);
+        public static Saved<Settings> settings = new Saved<Settings>(@"C:\REX_Saves\YongGiPracticeDojang\Settings.json", SerializeMethod.JSON);
+        public static Saved<List<TrainingPreset>> presets = new Saved<List<TrainingPreset>>(@"C:\REX_Saves\YongGiPracticeDojang\TrainingPresets.json", SerializeMethod.JSON);
 
         public class Saved <T>
         {
+            public T value;
             public SerializeMethod method;
-
-            public Func<T> getVal;
-            public Action<T> setVal;
-
             public string path;
 
-            public Saved (Func<T> getVal, string path, SerializeMethod method, Action<T> setVal)
+            public Saved (string path, SerializeMethod method = SerializeMethod.Byte)
             {
-                this.getVal = getVal;
-                this.setVal = setVal;
-
                 this.path = path;
                 this.method = method;
+            }
+
+            public void Create ()
+            {
+                File.Open(path, FileMode.Create, FileAccess.Write, FileShare.ReadWrite);
+
+                if (method == SerializeMethod.XML)
+                {
+                    XmlDocument doc = new XmlDocument();
+                    //doc.LoadXml("<?xml version=\"1.0\" encoding=\"utf-8\"?>"); //Your string here
+
+                    // Save the document to a file and auto-indent the output.
+                    using (XmlWriter writer = XmlWriter.Create(File.Open(path, FileMode.Open, FileAccess.Write, FileShare.ReadWrite)))
+                    {
+                        /*writer.WriteStartElement("Root", null);
+                        writer.WriteEndElement();*/
+                        //writer.Close();
+                    }
+                }
             }
 
             public void Save ()
@@ -208,14 +241,22 @@ namespace ITF_Res
                 {
                     Stream stream = File.Open(path, FileMode.Open);
                     BinaryFormatter bf = new BinaryFormatter();
-                    bf.Serialize(stream, getVal());
+                    bf.Serialize(stream, value);
                     stream.Close();
                 } else if (method == SerializeMethod.XML)
                 {
                     XmlSerializer serializer = new XmlSerializer(typeof(T));
                     using (TextWriter tw = new StreamWriter(path))
                     {
-                        serializer.Serialize(tw, getVal());
+                        serializer.Serialize(tw, value);
+                    }
+                } else if (method == SerializeMethod.JSON)
+                {
+                    //File.WriteAllText(path, JsonConvert.SerializeObject(value, Newtonsoft.Json.Formatting.Indented));
+
+                    using (StreamWriter writer = new StreamWriter(path))
+                    {
+                        writer.Write(JsonConvert.SerializeObject(value, Newtonsoft.Json.Formatting.Indented));
                     }
                 }
             }
@@ -227,7 +268,7 @@ namespace ITF_Res
                     Stream stream = File.Open(path, FileMode.Open);
                     BinaryFormatter bf = new BinaryFormatter();
 
-                    setVal((T)bf.Deserialize(stream));
+                    value = (T)bf.Deserialize(stream);
                     stream.Close();
 
                 }
@@ -236,16 +277,28 @@ namespace ITF_Res
                     XmlSerializer deserializer = new XmlSerializer(typeof(T));
                     TextReader reader = new StreamReader(path);
                     //object obj = deserializer.Deserialize(reader);
-                    setVal((T)deserializer.Deserialize(reader));
+                    value = (T)deserializer.Deserialize(reader);
                     reader.Close();
+                } else if (method == SerializeMethod.JSON)
+                {
+                    //value = JsonConvert.DeserializeObject<T>(File.ReadAllText(path));
+
+                    using (StreamReader reader = new StreamReader(path))
+                    {
+                        value = JsonConvert.DeserializeObject<T>(reader.ReadToEnd());
+                    }
                 }
+            }
+
+            public bool Exists ()
+            {
+                return File.Exists(path);
             }
         }
 
         public static void SET()
         {
             System.Diagnostics.Debug.WriteLine("Welcome Message!");
-
 
             // creates files, directories
             if (!Directory.Exists(@"C:\REX_Saves"))
@@ -259,48 +312,26 @@ namespace ITF_Res
                 dir.Create();
             }
 
-            Stream IOsettings = File.Open(@"C:\REX_SaveFiles\YongGiPracticeDojang\Settings.xaml", FileMode.Create);
-            Stream IOpreferences = File.Open(@"C:\REX_SaveFiles\YongGiPracticeDojang\Preferences.xaml", FileMode.Create);
-            Stream IOrecords = File.Open(@"C:\REX_SaveFiles\YongGiPracticeDojang\Records.save", FileMode.Create);
-            Stream IOpresets = File.Open(@"C:\REX_SaveFiles\YongGiPracticeDojang\TrainingPresets.xaml", FileMode.Create);
+            records.Create();
+            preferences.Create();
+            settings.Create();
+            presets.Create();
 
             //defaults
-            records = new List<Record>();
-            preferences = new Preferences();
-            settings = new Settings();
-            presets = new List<TrainingPreset>();
+            records.value = new List<Record>();
+            preferences.value = new Preferences();
+            settings.value = new Settings();
+            presets.value = new List<TrainingPreset>();
         }
 
         #region "SaveFiles"
         public static void Save ()
         {
             //saves to files
-
-            XmlSerializer serializer;
-            ///
-            serializer = new XmlSerializer(typeof(Settings));
-            using (TextWriter tw = new StreamWriter(@"C:\REX_Saves\YongGiPracticeDojang\Settings.xml"))
-            {
-                serializer.Serialize(tw, settings);
-            }
-            ///
-            serializer = new XmlSerializer(typeof(Preferences));
-            using (TextWriter tw = new StreamWriter(@"C:\REX_Saves\YongGiPracticeDojang\Preferences.xml"))
-            {
-                serializer.Serialize(tw, preferences);
-            }
-            ///
-            serializer = new XmlSerializer(typeof(TrainingPreset));
-            using (TextWriter tw = new StreamWriter(@"C:\REX_Saves\YongGiPracticeDojang\TrainingPresets.xml"))
-            {
-                serializer.Serialize(tw, presets);
-            }
-            ///
-            Stream stream = File.Open(@"C:\REX_SaveFiles\YongGiPracticeDojang\Records.save", FileMode.Open);
-            BinaryFormatter bf = new BinaryFormatter();
-
-            bf.Serialize(stream, records);
-            stream.Close();
+            records.Save();
+            preferences.Save();
+            settings.Save();
+            presets.Save();
         }
 
         public static void Load ()
@@ -309,51 +340,43 @@ namespace ITF_Res
             {
                 //welcome message
                 SET();
-            }
-            else { // direcrory does exist
+            } 
+            else 
+            { 
+                // direcrory does exist
                 //load from files
 
-                if (File.Exists(@"C:\REX_Saves\YongGiPracticeDojang\Settings.xaml"))
+                if (settings.Exists())
                 {
-                    //also get files!!!!!!!
+                    settings.Load();
                 } else
                 {
-                    //create new file
-                    File.Create(@"C:\REX_SaveFiles\YongGiPracticeDojang\Settings.xaml");
-                    settings = new Settings();
+                    settings.Create();
+                    settings.value = new Settings();
                 }
-                if (File.Exists(@"C:\REX_Saves\YongGiPracticeDojang\Preferences.xaml"))
+                if (preferences.Exists())
                 {
-                    
+                    preferences.Load();
                 } else
                 {
-                    File.Create(@"C:\REX_SaveFiles\YongGiPracticeDojang\Preferences.xaml");
-                    preferences = new Preferences();
+                    preferences.Create();
+                    preferences.value = new Preferences();
                 }
-                if (File.Exists(@"C:\REX_Saves\YongGiPracticeDojang\TrainingPresets.xaml"))
+                if (presets.Exists())
                 {
-                    XmlSerializer deserializer = new XmlSerializer(typeof(List<TrainingPreset>));
-                    using (FileStream reader = File.OpenRead(@"C:\REX_Saves\YongGiPracticeDojang\TrainingPresets.xaml"))
-                    {
-                        presets = (List<TrainingPreset>)(deserializer.Deserialize(reader));
-                        reader.Close();
-                    }
+                    presets.Load();
                 } else
                 {
-                    File.Create(@"C:\REX_SaveFiles\YongGiPracticeDojang\TrainingPresets.xaml");
-                    presets = new List<TrainingPreset>();
+                    presets.Create();
+                    presets.value = new List<TrainingPreset>();
                 }
-                if (File.Exists(@"C:\REX_Saves\YongGiPracticeDojang\Records.save"))
+                if (records.Exists())
                 {
-                    Stream stream = File.Open(@"C:\REX_SaveFiles\YongGiPracticeDojang\Records.save", FileMode.Open);
-                    BinaryFormatter bf = new BinaryFormatter();
-
-                    records = (List<Record>)bf.Deserialize(stream);
-                    stream.Close();
+                    records.Load();
                 } else
                 {
-                    File.Create(@"C:\REX_SaveFiles\YongGiPracticeDojang\Records.save");
-                    records = new List<Record>();
+                    records.Create();
+                    records.value = new List<Record>();
                 }
             }
         }

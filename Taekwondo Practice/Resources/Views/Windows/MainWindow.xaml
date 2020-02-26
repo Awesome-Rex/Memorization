@@ -8,6 +8,8 @@
         xmlns:converter="clr-namespace:Taekwondo_Practice.Resources.Scripts.ViewModel.Converters"
         xmlns:puc="clr-namespace:Taekwondo_Practice.Resources.Scripts.Views.UserControls.SettingFields"
         
+        Closed="Window_Closed"
+        
         Title="Taekwondo" Height="750" Width="1200" WindowState="Maximized">
     <Grid>
         <Frame Name="Subject" NavigationUIVisibility="Hidden">
