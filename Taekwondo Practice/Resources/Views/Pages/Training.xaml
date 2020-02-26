@@ -156,7 +156,7 @@
                                     </ComboBox>
                                     <Button x:Name="AddButton" Grid.Column="1" Content="+" Background="#FF979797"/>
                                 </Grid>
-                                <puc:TextCombo Margin="0,0,0,15">
+                                <!--<puc:TextCombo Margin="0,0,0,15">
                                     <puc:TextCombo.Info>
                                         <Label Grid.Column="0" Foreground="White" FontSize="20" Content="Difficulty"></Label>
                                     </puc:TextCombo.Info>
@@ -167,7 +167,7 @@
                                             <ComboBoxItem ToolTip="Useful for preparing for a test or tournament.">Test Preparation</ComboBoxItem>
                                         </ComboBox>
                                     </puc:TextCombo.Box>
-                                </puc:TextCombo>
+                                </puc:TextCombo>-->
                                 <Grid Margin="0,0,0,15">
                                     <Grid.ColumnDefinitions>
                                         <ColumnDefinition Width="Auto"/>
@@ -270,18 +270,5 @@
                 </Grid>
             </Grid>
         </DockPanel>
-        <DockPanel x:Name="FocusView" Background="Black" Visibility="Collapsed" ScrollViewer.VerticalScrollBarVisibility="Disabled" d:IsLocked="True">
-            <Grid DockPanel.Dock="Bottom" Height="20" VerticalAlignment="Bottom">
-                <Button FontSize="40" BorderBrush="{x:Null}">
-                    <Button.Background>
-                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                            <GradientStop Color="#FF282828"/>
-                            <GradientStop Color="#FF111111" Offset="1"/>
-                        </LinearGradientBrush>
-                    </Button.Background>
-                </Button>
-            </Grid>
-        </DockPanel>
-        <Grid Name="Overlay" Background="#00000000" Visibility="Collapsed" d:IsLocked="True"/>
     </Grid>
 </Page>

@@ -4,7 +4,6 @@ using System.Linq;
 using System.Text;
 using System.Windows.Media;
 using System.Threading;
-//using static ITF_Res.Material;
 
 namespace ITF_Res
 {

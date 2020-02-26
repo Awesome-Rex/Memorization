@@ -16,8 +16,9 @@ using System.Numerics;
 using System.Windows.Threading;
 using System.Windows.Media.Animation;
 using Taekwondo_Practice.Resources;
+using System.Threading;
 
-namespace Taekwondo_Practice
+namespace Taekwondo_Practice.Resources.Views.Windows
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
@@ -28,7 +29,8 @@ namespace Taekwondo_Practice
         {
             InitializeComponent();
 
-            Subject.NavigationService.Navigate(new Resources.Views.Pages.Training());
+            Subject.Navigate(new Taekwondo_Practice.Resources.Views.Pages.Training());
+            //ITF_Res.Data.Load(); 
         }
     }
 }

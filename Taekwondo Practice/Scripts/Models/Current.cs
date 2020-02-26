@@ -16,7 +16,8 @@ namespace ITF_Res
     }
 
     #region "Save Types"
-    public class Record
+    [Serializable]
+    public class Record : ISerializable
     {
         public string name;
         public int rating;
@@ -44,13 +45,24 @@ namespace ITF_Res
             rank = Material.Ranks[0];
             difficulty = DifficultyLevel.Medium;
         }
+
+        public void GetObjectData(SerializationInfo info, StreamingContext context)
+        {
+            throw new NotImplementedException();
+        }
     }
 
-    public class Preferences : IDefaultable
+    [Serializable]
+    public class Preferences : IDefaultable, ISerializable
     {
         public void SetDefault()
         {
 
+        }
+
+        public void GetObjectData(SerializationInfo info, StreamingContext context)
+        {
+            throw new NotImplementedException();
         }
 
         public Preferences ()
@@ -59,7 +71,8 @@ namespace ITF_Res
         }
     }
 
-    public class Settings : IDefaultable
+    [Serializable]
+    public class Settings : IDefaultable, ISerializable
     {
         public float noiseVolume;
         public float SFXVolume;
@@ -69,22 +82,33 @@ namespace ITF_Res
 
         }
 
+        public void GetObjectData(SerializationInfo info, StreamingContext context)
+        {
+            throw new NotImplementedException();
+        }
+
         public Settings()
         {
             SetDefault();
         }
     }
 
-    public class Preset
+    [Serializable]
+    public class TrainingPreset : ISerializable
     {
         public string name;
 
         public List<Command> SessionStructure = new List<Command>();
 
-        public Preset (string name, List<Command> SessionStructure)
+        public TrainingPreset (string name, List<Command> SessionStructure)
         {
             this.name = name;
             this.SessionStructure = SessionStructure;
+        }
+
+        public void GetObjectData(SerializationInfo info, StreamingContext context)
+        {
+            throw new NotImplementedException();
         }
     }
     #endregion
@@ -126,7 +150,7 @@ namespace ITF_Res
 
         public static void addPreset(string name)
         {
-            Data.presets.Add(new Preset(name, SessionStructure));
+            Data.presets.Add(new TrainingPreset(name, SessionStructure));
         }
         #endregion
 
@@ -142,53 +166,195 @@ namespace ITF_Res
 
         public static void EndSession ()
         {
-
+            
         }
     }
 
     public static class Data
     {
-        public static List<Record> records = new List<Record>();
-        public static Preferences preferences = new Preferences();
-        public static Settings settings = new Settings();
-        public static List<Preset> presets = new List<Preset>();
+        public enum SerializeMethod { Byte, XML };
+
+        public static List<Record> records;
+        public static Preferences preferences;
+        public static Settings settings;
+        public static List<TrainingPreset> presets;
+
+        public static List<Saved<List<Record>>> saves = new List<Saved<List<Record>>>
+        {
+            new Saved<List<Record>>(() => records, @"C:\REX_SaveFiles\YongGiPracticeDojang\Records.save", SerializeMethod.Byte, n => records = n)
+        };
+
+        public class Saved <T>
+        {
+            public SerializeMethod method;
+
+            public Func<T> getVal;
+            public Action<T> setVal;
+
+            public string path;
+
+            public Saved (Func<T> getVal, string path, SerializeMethod method, Action<T> setVal)
+            {
+                this.getVal = getVal;
+                this.setVal = setVal;
+
+                this.path = path;
+                this.method = method;
+            }
+
+            public void Save ()
+            {
+                if (method == SerializeMethod.Byte)
+                {
+                    Stream stream = File.Open(path, FileMode.Open);
+                    BinaryFormatter bf = new BinaryFormatter();
+                    bf.Serialize(stream, getVal());
+                    stream.Close();
+                } else if (method == SerializeMethod.XML)
+                {
+                    XmlSerializer serializer = new XmlSerializer(typeof(T));
+                    using (TextWriter tw = new StreamWriter(path))
+                    {
+                        serializer.Serialize(tw, getVal());
+                    }
+                }
+            }
+
+            public void Load ()
+            {
+                if (method == SerializeMethod.Byte)
+                {
+                    Stream stream = File.Open(path, FileMode.Open);
+                    BinaryFormatter bf = new BinaryFormatter();
+
+                    setVal((T)bf.Deserialize(stream));
+                    stream.Close();
+
+                }
+                else if (method == SerializeMethod.XML)
+                {
+                    XmlSerializer deserializer = new XmlSerializer(typeof(T));
+                    TextReader reader = new StreamReader(path);
+                    //object obj = deserializer.Deserialize(reader);
+                    setVal((T)deserializer.Deserialize(reader));
+                    reader.Close();
+                }
+            }
+        }
 
         public static void SET()
         {
+            System.Diagnostics.Debug.WriteLine("Welcome Message!");
+
+
+            // creates files, directories
+            if (!Directory.Exists(@"C:\REX_Saves"))
+            {
+                DirectoryInfo dir = new DirectoryInfo(@"C:\REX_Saves");
+                dir.Create();
+            }
+            if (!Directory.Exists(@"C:\REX_Saves\YongGiPracticeDojang"))
+            {
+                DirectoryInfo dir = new DirectoryInfo(@"C:\REX_Saves\YongGiPracticeDojang");
+                dir.Create();
+            }
+
+            Stream IOsettings = File.Open(@"C:\REX_SaveFiles\YongGiPracticeDojang\Settings.xaml", FileMode.Create);
+            Stream IOpreferences = File.Open(@"C:\REX_SaveFiles\YongGiPracticeDojang\Preferences.xaml", FileMode.Create);
+            Stream IOrecords = File.Open(@"C:\REX_SaveFiles\YongGiPracticeDojang\Records.save", FileMode.Create);
+            Stream IOpresets = File.Open(@"C:\REX_SaveFiles\YongGiPracticeDojang\TrainingPresets.xaml", FileMode.Create);
+
+            //defaults
             records = new List<Record>();
             preferences = new Preferences();
             settings = new Settings();
-            presets = new List<Preset>();
+            presets = new List<TrainingPreset>();
         }
 
         #region "SaveFiles"
         public static void Save ()
         {
-            DirectoryInfo location = new DirectoryInfo(".");
-            DirectoryInfo folder = new DirectoryInfo(@"C:\REX_SaveFiles\YongGiPracticeDojang");
+            //saves to files
 
-            settings = Current.settings;
-            preferences = Current.preferences;
+            XmlSerializer serializer;
+            ///
+            serializer = new XmlSerializer(typeof(Settings));
+            using (TextWriter tw = new StreamWriter(@"C:\REX_Saves\YongGiPracticeDojang\Settings.xml"))
+            {
+                serializer.Serialize(tw, settings);
+            }
+            ///
+            serializer = new XmlSerializer(typeof(Preferences));
+            using (TextWriter tw = new StreamWriter(@"C:\REX_Saves\YongGiPracticeDojang\Preferences.xml"))
+            {
+                serializer.Serialize(tw, preferences);
+            }
+            ///
+            serializer = new XmlSerializer(typeof(TrainingPreset));
+            using (TextWriter tw = new StreamWriter(@"C:\REX_Saves\YongGiPracticeDojang\TrainingPresets.xml"))
+            {
+                serializer.Serialize(tw, presets);
+            }
+            ///
+            Stream stream = File.Open(@"C:\REX_SaveFiles\YongGiPracticeDojang\Records.save", FileMode.Open);
+            BinaryFormatter bf = new BinaryFormatter();
 
-            /// save each to file
+            bf.Serialize(stream, records);
+            stream.Close();
         }
 
-        public static void Load (string directory = @"/\/\")
+        public static void Load ()
         {
-            if (true) // specific files don't exist
+            if (!Directory.Exists(@"C:\REX_Saves\YongGiPracticeDojang") || !Directory.Exists(@"C:\REX_Saves")) // all files don't exist
             {
+                //welcome message
                 SET();
             }
-            else if (true) // all files don't exist
-            {
-                SET();
-            }
-            else if (true) { // files do exist
+            else { // direcrory does exist
                 //load from files
-                //set preferences (on current)
-                //set presets
-                //set settings (on current)
-                //set records
+
+                if (File.Exists(@"C:\REX_Saves\YongGiPracticeDojang\Settings.xaml"))
+                {
+                    //also get files!!!!!!!
+                } else
+                {
+                    //create new file
+                    File.Create(@"C:\REX_SaveFiles\YongGiPracticeDojang\Settings.xaml");
+                    settings = new Settings();
+                }
+                if (File.Exists(@"C:\REX_Saves\YongGiPracticeDojang\Preferences.xaml"))
+                {
+                    
+                } else
+                {
+                    File.Create(@"C:\REX_SaveFiles\YongGiPracticeDojang\Preferences.xaml");
+                    preferences = new Preferences();
+                }
+                if (File.Exists(@"C:\REX_Saves\YongGiPracticeDojang\TrainingPresets.xaml"))
+                {
+                    XmlSerializer deserializer = new XmlSerializer(typeof(List<TrainingPreset>));
+                    using (FileStream reader = File.OpenRead(@"C:\REX_Saves\YongGiPracticeDojang\TrainingPresets.xaml"))
+                    {
+                        presets = (List<TrainingPreset>)(deserializer.Deserialize(reader));
+                        reader.Close();
+                    }
+                } else
+                {
+                    File.Create(@"C:\REX_SaveFiles\YongGiPracticeDojang\TrainingPresets.xaml");
+                    presets = new List<TrainingPreset>();
+                }
+                if (File.Exists(@"C:\REX_Saves\YongGiPracticeDojang\Records.save"))
+                {
+                    Stream stream = File.Open(@"C:\REX_SaveFiles\YongGiPracticeDojang\Records.save", FileMode.Open);
+                    BinaryFormatter bf = new BinaryFormatter();
+
+                    records = (List<Record>)bf.Deserialize(stream);
+                    stream.Close();
+                } else
+                {
+                    File.Create(@"C:\REX_SaveFiles\YongGiPracticeDojang\Records.save");
+                    records = new List<Record>();
+                }
             }
         }
         #endregion
