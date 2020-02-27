@@ -218,7 +218,7 @@ namespace ITF_Res
 
             public void Create ()
             {
-                File.Open(path, FileMode.Create, FileAccess.Write, FileShare.ReadWrite);
+                File.Open(path, FileMode.Create, FileAccess.ReadWrite, FileShare.ReadWrite);
 
                 if (method == SerializeMethod.XML)
                 {
@@ -257,6 +257,7 @@ namespace ITF_Res
                     using (StreamWriter writer = new StreamWriter(path))
                     {
                         writer.Write(JsonConvert.SerializeObject(value, Newtonsoft.Json.Formatting.Indented));
+                        writer.Close();
                     }
                 }
             }
@@ -285,7 +286,8 @@ namespace ITF_Res
 
                     using (StreamReader reader = new StreamReader(path))
                     {
-                        value = JsonConvert.DeserializeObject<T>(reader.ReadToEnd());
+                        string r = reader.ReadToEnd();
+                        value = JsonConvert.DeserializeObject<T>(r);
                     }
                 }
             }
@@ -312,7 +314,7 @@ namespace ITF_Res
                 dir.Create();
             }
 
-            records.Create();
+            //records.Create();
             preferences.Create();
             settings.Create();
             presets.Create();
@@ -328,7 +330,7 @@ namespace ITF_Res
         public static void Save ()
         {
             //saves to files
-            records.Save();
+            //records.Save();
             preferences.Save();
             settings.Save();
             presets.Save();

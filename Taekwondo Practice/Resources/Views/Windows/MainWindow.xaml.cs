@@ -30,12 +30,23 @@ namespace Taekwondo_Practice.Resources.Views.Windows
             InitializeComponent();
 
             Subject.Navigate(new Taekwondo_Practice.Resources.Views.Pages.Training());
-            ITF_Res.Data.Load(); 
+            ITF_Res.Data.Load();
+
+            new Thread(initialSave).Start();
+            
         }
 
-        private void Window_Closed(object sender, EventArgs e)
+        void initialSave ()
         {
-            ITF_Res.Data.Save();
+            try
+            {
+                ITF_Res.Data.Save();
+            } catch
+            {
+                Thread.Sleep(TimeSpan.FromSeconds(1));
+                new Thread(initialSave).Start();
+            }
         }
+
     }
 }
