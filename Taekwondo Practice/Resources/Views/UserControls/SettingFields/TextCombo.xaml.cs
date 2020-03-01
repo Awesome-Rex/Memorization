@@ -11,7 +11,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Taekwondo_Practice.Resources.Scripts.Views.UserControls.SettingFields
+namespace Practice_Dojang.Resources.Scripts.Views.UserControls.SettingFields
 {
 
     public partial class TextCombo : UserControl

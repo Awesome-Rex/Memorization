@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Data;
 
-namespace Taekwondo_Practice.Resources.Scripts.ViewModel.Converters
+namespace Practice_Dojang.Resources.Scripts.ViewModel.Converters
 {
     public class MathConverter : IValueConverter
     {

@@ -10,7 +10,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-namespace Taekwondo_Practice.Resources.Views.Windows
+namespace Practice_Dojang.Resources.Views.Windows
 {
     /// <summary>
     /// Interaction logic for Preferences.xaml

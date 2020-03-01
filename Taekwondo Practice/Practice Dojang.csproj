@@ -3,7 +3,7 @@
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
     <TargetFramework>netcoreapp3.1</TargetFramework>
-    <RootNamespace>Taekwondo_Practice</RootNamespace>
+    <RootNamespace>Practice_Dojang</RootNamespace>
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 

@@ -11,7 +11,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Taekwondo_Practice.Resources.Views.Pages
+namespace Practice_Dojang.Resources.Views.Pages
 {
     /// <summary>
     /// Interaction logic for FocusTraining.xaml

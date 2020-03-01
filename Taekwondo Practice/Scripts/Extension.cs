@@ -4,7 +4,7 @@ using System.Text;
 using System.Windows;
 using System.Windows.Controls;
 
-namespace Taekwondo_Practice
+namespace Practice_Dojang
 {
     namespace Extension
     {

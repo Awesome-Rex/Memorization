@@ -30,10 +30,10 @@ using System.Windows.Media.TextFormatting;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Windows.Shell;
-using Taekwondo_Practice.Resources.Scripts.ViewModel.Converters;
+using Practice_Dojang.Resources.Scripts.ViewModel.Converters;
 
 
-namespace Taekwondo_Practice {
+namespace Practice_Dojang {
     
     
     /// <summary>
@@ -75,7 +75,7 @@ namespace Taekwondo_Practice {
         [System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [System.CodeDom.Compiler.GeneratedCodeAttribute("PresentationBuildTasks", "4.8.1.0")]
         public static void Main() {
-            Taekwondo_Practice.App app = new Taekwondo_Practice.App();
+            Practice_Dojang.App app = new Practice_Dojang.App();
             app.InitializeComponent();
             app.Run();
         }

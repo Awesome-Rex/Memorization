@@ -15,10 +15,10 @@ using System.Windows.Shapes;
 using System.Numerics;
 using System.Windows.Threading;
 using System.Windows.Media.Animation;
-using Taekwondo_Practice.Resources;
+using Practice_Dojang.Resources;
 using System.Threading;
 
-namespace Taekwondo_Practice.Resources.Views.Windows
+namespace Practice_Dojang.Resources.Views.Windows
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
@@ -29,8 +29,8 @@ namespace Taekwondo_Practice.Resources.Views.Windows
         {
             InitializeComponent();
 
-            Subject.Navigate(new Taekwondo_Practice.Resources.Views.Pages.Training());
-            MenuBar.Navigate(new Taekwondo_Practice.Resources.Views.Pages.MenuBar());
+            Subject.Navigate(new Practice_Dojang.Resources.Views.Pages.Training());
+            MenuBar.Navigate(new Practice_Dojang.Resources.Views.Pages.MenuBar());
         }
     }
 }

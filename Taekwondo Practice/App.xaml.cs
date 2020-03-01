@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 using System.Windows;
 
 
-namespace Taekwondo_Practice
+namespace Practice_Dojang
 {
     /// <summary>
     /// Interaction logic for App.xaml
