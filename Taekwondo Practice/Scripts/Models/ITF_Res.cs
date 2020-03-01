@@ -394,9 +394,18 @@ namespace ITF_Res
         };
     }
 
+    [Serializable]
     public abstract class Command
     {
         public abstract void Execute();
+    }
+
+    public static class Timer
+    {
+        public static void StartTicks (float tickTime, Action ETick)
+        {
+            throw new NotImplementedException();
+        }
     }
 
     public static class Commands
@@ -491,6 +500,7 @@ namespace ITF_Res
 
     namespace Ranking
     {
+        [Serializable]
         public abstract class Belt : INamed, IRanked
         {
             public abstract string name { get; set; }

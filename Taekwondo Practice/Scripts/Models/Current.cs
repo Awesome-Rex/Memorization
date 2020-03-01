@@ -20,7 +20,7 @@ namespace ITF_Res
 
     #region "Save Types"
     [Serializable]
-    public class Record : ISerializable
+    public class Record
     {
         public string name;
         public int rating;
@@ -48,34 +48,14 @@ namespace ITF_Res
             rank = Material.Ranks[0];
             difficulty = DifficultyLevel.Medium;
         }
-
-        public void GetObjectData(SerializationInfo info, StreamingContext context)
-        {
-            throw new NotImplementedException();
-        }
-
-        public Record(SerializationInfo info, StreamingContext ctxt)
-        {
-            throw new NotImplementedException();
-        }
     }
 
     [Serializable]
-    public class Preferences : IDefaultable, ISerializable
+    public class Preferences : IDefaultable
     {
         public void SetDefault()
         {
 
-        }
-
-        public void GetObjectData(SerializationInfo info, StreamingContext context)
-        {
-            throw new NotImplementedException();
-        }
-
-        public Preferences(SerializationInfo info, StreamingContext ctxt)
-        {
-            throw new NotImplementedException();
         }
 
         public Preferences ()
@@ -85,7 +65,7 @@ namespace ITF_Res
     }
 
     [Serializable]
-    public class Settings : IDefaultable, ISerializable
+    public class Settings : IDefaultable
     {
         public float noiseVolume;
         public float SFXVolume;
@@ -95,16 +75,6 @@ namespace ITF_Res
 
         }
 
-        public void GetObjectData(SerializationInfo info, StreamingContext context)
-        {
-            throw new NotImplementedException();
-        }
-
-        public Settings(SerializationInfo info, StreamingContext ctxt)
-        {
-            throw new NotImplementedException();
-        }
-
         public Settings()
         {
             SetDefault();
@@ -112,7 +82,7 @@ namespace ITF_Res
     }
 
     [Serializable]
-    public class TrainingPreset : ISerializable
+    public class TrainingPreset
     {
         public string name;
 
@@ -122,16 +92,6 @@ namespace ITF_Res
         {
             this.name = name;
             this.SessionStructure = SessionStructure;
-        }
-
-        public void GetObjectData(SerializationInfo info, StreamingContext context)
-        {
-            throw new NotImplementedException();
-        }
-
-        public TrainingPreset(SerializationInfo info, StreamingContext ctxt)
-        {
-            throw new NotImplementedException();
         }
     }
     #endregion
@@ -314,7 +274,7 @@ namespace ITF_Res
                 dir.Create();
             }
 
-            //records.Create();
+            records.Create();
             preferences.Create();
             settings.Create();
             presets.Create();
@@ -330,7 +290,7 @@ namespace ITF_Res
         public static void Save ()
         {
             //saves to files
-            //records.Save();
+            records.Save();
             preferences.Save();
             settings.Save();
             presets.Save();

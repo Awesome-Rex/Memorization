@@ -1,0 +1,86 @@
+﻿<Page x:Class="Taekwondo_Practice.Resources.Views.Pages.MenuBar"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Taekwondo_Practice.Resources.Views.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="750" d:DesignWidth="1200"
+      Title="MenuBar">
+    <Page.Resources>
+        <Style TargetType="MenuItem" x:Key="MainMenuBarItem">
+            <Setter Property="FontSize" Value="19"/>
+            <Setter Property="FontFamily" Value="Segoe UI Light"/>
+            <Setter Property="Foreground" Value="#FF8B8B8B"/>
+            <Setter Property="Background" Value="#FF1D1D1D"/>
+            <Setter Property="VerticalContentAlignment" Value="Bottom"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="MenuItem">
+                        <Grid Background="{TemplateBinding Background}">
+                            <Label Content="{TemplateBinding Header}" Foreground="{TemplateBinding Foreground}" VerticalAlignment="Stretch" VerticalContentAlignment="Center" FontSize="{TemplateBinding FontSize}"/>
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="#FF383838"/>
+                </Trigger>
+                <Trigger Property="IsPressed" Value="True">
+
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+    </Page.Resources>
+
+    <DockPanel LastChildFill="False" Visibility="Visible">
+        <Grid DockPanel.Dock="Top" Height="35" MouseEnter="MainMenuBar_MouseEnter" MouseLeave="MainMenuBar_MouseLeave" VerticalAlignment="Center" Background="#00000000">
+            <Menu x:Name="MainMenuBar" Height="35" Background="#FF1D1D1D" VerticalAlignment="Top">
+                <MenuItem Header="File" Style="{StaticResource MainMenuBarItem}">
+                    <MenuItem Header="Save Progress" Style="{StaticResource MainMenuBarItem}" InputGestureText="Ctrl+S"></MenuItem>
+                    <MenuItem Header="Home" Style="{StaticResource MainMenuBarItem}" InputGestureText="Esc">
+                        <MenuItem.Icon>
+                            <Image Source="/Practice Dojang;component/Resources/Icons/Menu.png"/>
+                        </MenuItem.Icon>
+                    </MenuItem>
+                    <MenuItem Header="Close Window" Style="{StaticResource MainMenuBarItem}"></MenuItem>
+                </MenuItem>
+                <MenuItem Header="Edit" Style="{StaticResource MainMenuBarItem}">
+                    <MenuItem Header="Continue" Style="{StaticResource MainMenuBarItem}" InputGestureText="Space">
+                        <MenuItem.Icon>
+                            <Image Source="/Practice Dojang;component/Resources/Icons/Continue.png"/>
+                        </MenuItem.Icon>
+                    </MenuItem>
+                    <MenuItem Header="Undo" Style="{StaticResource MainMenuBarItem}" InputGestureText="Ctrl+Z">
+                        <MenuItem.Icon>
+                            <Image Source="/Practice Dojang;component/Resources/Icons/Undo.png"/>
+                        </MenuItem.Icon>
+                    </MenuItem>
+                </MenuItem>
+                <!--<MenuItem Header="Session" Style="{StaticResource MainMenuBarItem}">
+                    <MenuItem Header="Help" Style="{StaticResource MainMenuBarItem}"></MenuItem>
+                </MenuItem>-->
+                <MenuItem Header="Settings" Style="{StaticResource MainMenuBarItem}">
+                    <MenuItem Header="Preferences" Style="{StaticResource MainMenuBarItem}"></MenuItem>
+                    <MenuItem Header="Settings" Style="{StaticResource MainMenuBarItem}"></MenuItem>
+                    <MenuItem Header="Training Presets" Style="{StaticResource MainMenuBarItem}"></MenuItem>
+                </MenuItem>
+                <MenuItem Header="Help" Style="{StaticResource MainMenuBarItem}">
+                    <MenuItem Header="More Info..." Style="{StaticResource MainMenuBarItem}" InputGestureText="Shift">
+                        <MenuItem.Icon>
+                            <Image Source="/Practice Dojang;component/Resources/Icons/Link.png"></Image>
+                        </MenuItem.Icon>
+                        <MenuItem Header='Research "Gunnon Sogi / Walking Stance" ' Style="{StaticResource MainMenuBarItem}"></MenuItem>
+                        <MenuItem Header='Research "Kuande Jirugi / Middle Punch"' Style="{StaticResource MainMenuBarItem}"></MenuItem>
+                    </MenuItem>
+                    <MenuItem Header="Translate" Style="{StaticResource MainMenuBarItem}" InputGestureText="?">
+                        <MenuItem.Icon>
+                            <Image Source="/Practice Dojang;component/Resources/Icons/Translate.png"/>
+                        </MenuItem.Icon>
+                    </MenuItem>
+                </MenuItem>
+            </Menu>
+        </Grid>
+    </DockPanel>
+</Page>

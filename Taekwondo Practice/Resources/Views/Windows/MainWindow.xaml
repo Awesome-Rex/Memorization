@@ -9,9 +9,16 @@
         xmlns:puc="clr-namespace:Taekwondo_Practice.Resources.Scripts.Views.UserControls.SettingFields"
         
         Title="Taekwondo" Height="750" Width="1200" WindowState="Maximized" >
+    <Window.Resources>
+        
+    </Window.Resources>
     <Grid>
         <Frame Name="Subject" NavigationUIVisibility="Hidden">
 
+        </Frame>
+
+        <Frame Name="MenuBar" NavigationUIVisibility="Hidden">
+            
         </Frame>
 
         <Grid Name="Transitioner" Background="Black" Opacity="0" Visibility="Collapsed" d:IsLocked="True">
