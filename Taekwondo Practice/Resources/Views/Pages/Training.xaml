@@ -1,15 +1,15 @@
-﻿<Page x:Class="Taekwondo_Practice.Resources.Views.Pages.Training"
+﻿<Page x:Class="Practice_Dojang.Resources.Views.Pages.Training"
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-      xmlns:local="clr-namespace:Taekwondo_Practice.Resources.Views.Pages"
+      xmlns:local="clr-namespace:Practice_Dojang.Resources.Views.Pages"
       mc:Ignorable="d" 
       d:DesignHeight="750" d:DesignWidth="1200"
       Title="Training"
       
-      xmlns:converter="clr-namespace:Taekwondo_Practice.Resources.Scripts.ViewModel.Converters"
-      xmlns:puc="clr-namespace:Taekwondo_Practice.Resources.Scripts.Views.UserControls.SettingFields">
+      xmlns:converter="clr-namespace:Practice_Dojang.Resources.Scripts.ViewModels.Converters"
+      xmlns:puc="clr-namespace:Practice_Dojang.Resources.Scripts.Views.UserControls.SettingFields">
 
     <Page.Resources>
         <converter:MathConverter x:Key="MathConverter"/>

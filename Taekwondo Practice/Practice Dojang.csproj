@@ -5,6 +5,7 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
     <RootNamespace>Practice_Dojang</RootNamespace>
     <UseWPF>true</UseWPF>
+    <StartupObject></StartupObject>
   </PropertyGroup>
 
   <ItemGroup>

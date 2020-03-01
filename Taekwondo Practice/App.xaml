@@ -1,8 +1,8 @@
-﻿<Application x:Class="Taekwondo_Practice.App"
+﻿<Application x:Class="Practice_Dojang.App"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              
-             xmlns:converter="clr-namespace:Taekwondo_Practice.Resources.Scripts.ViewModel.Converters"
+             xmlns:converter="clr-namespace:Practice_Dojang.Resources.Scripts.ViewModels.Converters"
              StartupUri="Resources/Views/Windows/MainWindow.xaml">
     <Application.Resources>
 

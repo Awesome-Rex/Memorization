@@ -4,7 +4,7 @@ using System.Globalization;
 using System.Text;
 using System.Windows.Data;
 
-namespace Practice_Dojang.Resources.Scripts.ViewModel.Converters
+namespace Practice_Dojang.Resources.Scripts.ViewModels.Converters
 {
     public class Multiplier : IValueConverter
     {
