@@ -209,10 +209,10 @@
                             </Grid.RowDefinitions>
 
                             <UniformGrid Grid.Row="0" Rows="1">
-                                <Button Style="{StaticResource InteractionNavigation}" ToolTip="Undo">
+                                <Button Style="{StaticResource InteractionNavigation}" ToolTip="Undo" FontFamily="Song Myung">
                                     뒤
                                 </Button>
-                                <Button Style="{StaticResource InteractionNavigation}" ToolTip="Continue">
+                                <Button Style="{StaticResource InteractionNavigation}" ToolTip="Continue" FontFamily="Song Myung">
                                     계속하다
                                 </Button>
                             </UniformGrid>

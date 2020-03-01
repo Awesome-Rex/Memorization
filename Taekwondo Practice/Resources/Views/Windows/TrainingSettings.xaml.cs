@@ -8,15 +8,14 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Practice_Dojang.Resources.Views.Pages
+namespace Practice_Dojang.Resources.Views.Windows
 {
     /// <summary>
     /// Interaction logic for TrainingSettings.xaml
     /// </summary>
-    public partial class TrainingSettings : Page
+    public partial class TrainingSettings : Window
     {
         public TrainingSettings()
         {
