@@ -8,39 +8,6 @@
       d:DesignHeight="750" d:DesignWidth="1200"
       Title="MenuBar">
     <Page.Resources>
-
-        <ControlTemplate x:Key="{x:Static MenuItem.TopLevelItemTemplateKey}" TargetType="{x:Type MenuItem}">
-            <Grid Background="{TemplateBinding Background}">
-                <Label x:Name="n" Content="{TemplateBinding Header}" FontSize="{TemplateBinding FontSize}" VerticalContentAlignment="{TemplateBinding VerticalContentAlignment}"
-                               Foreground="{TemplateBinding Foreground}" Background="{TemplateBinding Background}"/>
-                <Popup Placement="Bottom" IsOpen="{TemplateBinding IsSubmenuOpen}" AllowsTransparency="True" Focusable="False">
-                    <ScrollViewer CanContentScroll="True" VerticalScrollBarVisibility="Disabled">
-                        <StackPanel IsItemsHost="True" KeyboardNavigation.DirectionalNavigation="Cycle" />
-                    </ScrollViewer>
-                </Popup>
-            </Grid>
-
-            <ControlTemplate.Triggers>
-
-            </ControlTemplate.Triggers>
-        </ControlTemplate>
-        
-        <ControlTemplate x:Key="{x:Static MenuItem.SubmenuItemTemplateKey}" TargetType="{x:Type MenuItem}">
-            <Grid Background="{TemplateBinding Background}">
-                <Label x:Name="n" Content="{TemplateBinding Header}" FontSize="{TemplateBinding FontSize}" VerticalContentAlignment="{TemplateBinding VerticalContentAlignment}"
-                               Foreground="{TemplateBinding Foreground}" Background="{TemplateBinding Background}"/>
-                <Popup Placement="Right" IsOpen="{TemplateBinding IsSubmenuOpen}" AllowsTransparency="True" Focusable="False">
-                    <ScrollViewer CanContentScroll="True" VerticalScrollBarVisibility="Disabled">
-                        <StackPanel IsItemsHost="True" KeyboardNavigation.DirectionalNavigation="Cycle" />
-                    </ScrollViewer>
-                </Popup>
-            </Grid>
-
-            <ControlTemplate.Triggers>
-
-            </ControlTemplate.Triggers>
-        </ControlTemplate>
-
         <Style TargetType="MenuItem">
             <Setter Property="FontSize" Value="20"/>
             <Setter Property="FontFamily" Value="Segoe UI Light"/>
@@ -59,13 +26,26 @@
                     </DataTemplate>
                 </Setter.Value>
             </Setter>-->
-            
-            <!--<Setter Property="Template">
+
+            <Setter Property="Template">
                 <Setter.Value>
                     <ControlTemplate TargetType="MenuItem">
                         <Label x:Name="n" Content="{TemplateBinding Header}" FontSize="{TemplateBinding FontSize}" VerticalContentAlignment="{TemplateBinding VerticalContentAlignment}"
                                Foreground="{TemplateBinding Foreground}" Background="{TemplateBinding Background}"/>
                     </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+
+            <!--<Setter Property="ItemContainerStyle">
+                <Setter.Value>
+                    <Style TargetType="MenuItem">
+                        <Setter Property="FontSize" Value="20"/>
+                        <Setter Property="FontFamily" Value="Segoe UI Light"/>
+                        <Setter Property="Foreground" Value="#FF8B8B8B"/>
+                        <Setter Property="Background" Value="#FF1D1D1D"/>
+                        <Setter Property="VerticalContentAlignment" Value="Bottom"/>
+                        <Setter Property="HorizontalContentAlignment" Value="Center"/>
+                    </Style>
                 </Setter.Value>
             </Setter>-->
 
@@ -81,22 +61,21 @@
                 </Trigger>
             </Style.Triggers>
         </Style>
-        
-        
-        
+
+          
     </Page.Resources>
 
     <DockPanel LastChildFill="False" Visibility="Visible">
         <Grid DockPanel.Dock="Top" Height="35" MouseEnter="MainMenuBar_MouseEnter" MouseLeave="MainMenuBar_MouseLeave" VerticalAlignment="Center" Background="#00000000">
             <Menu x:Name="MainMenuBar" Height="35" Background="#FF1D1D1D" VerticalAlignment="Top">
                 <MenuItem Header="File"  >
-                    <MenuItem Header="Save Progress"   InputGestureText="Ctrl+S"></MenuItem>
+                    <MenuItem Header="Save Progress"   InputGestureText="Ctrl+S"/>
                     <MenuItem Header="Home"   InputGestureText="Esc">
                         <MenuItem.Icon>
                             <Image Source="/Practice Dojang;component/Resources/Icons/Menu.png"/>
                         </MenuItem.Icon>
                     </MenuItem>
-                    <MenuItem Header="Close Window"  ></MenuItem>
+                    <MenuItem Header="Close Window"  />
                 </MenuItem>
                 <MenuItem Header="Edit"  >
                     <MenuItem Header="Continue"   InputGestureText="Space">
@@ -111,17 +90,17 @@
                     </MenuItem>
                 </MenuItem>
                 <MenuItem Header="Settings"  >
-                    <MenuItem Header="Preferences"  ></MenuItem>
-                    <MenuItem Header="Settings"  ></MenuItem>
-                    <MenuItem Header="Training Presets"  ></MenuItem>
+                    <MenuItem Header="Preferences"  />
+                    <MenuItem Header="Settings"  />
+                    <MenuItem Header="Training Presets"  />
                 </MenuItem>
                 <MenuItem Header="Help"  >
                     <MenuItem Header="More Info..."   InputGestureText="Shift">
                         <MenuItem.Icon>
-                            <Image Source="/Practice Dojang;component/Resources/Icons/Link.png"></Image>
+                            <Image Source="/Practice Dojang;component/Resources/Icons/Link.png"/>
                         </MenuItem.Icon>
-                        <MenuItem Header='Research "Gunnon Sogi / Walking Stance" '  ></MenuItem>
-                        <MenuItem Header='Research "Kuande Jirugi / Middle Punch"'  ></MenuItem>
+                        <MenuItem Header='Research "Gunnon Sogi / Walking Stance" '  />
+                        <MenuItem Header='Research "Kuande Jirugi / Middle Punch"'  />
                     </MenuItem>
                     <MenuItem Header="Translate"   InputGestureText="?">
                         <MenuItem.Icon>
