@@ -156,18 +156,18 @@
                                     </ComboBox>
                                     <Button x:Name="AddButton" Grid.Column="1" Content="+" Background="#FF979797"/>
                                 </Grid>
-                                <!--<puc:TextCombo Margin="0,0,0,15">
+                                <puc:TextCombo Margin="0,0,0,15" Height="35">
                                     <puc:TextCombo.Info>
-                                        <Label Grid.Column="0" Foreground="White" FontSize="20" Content="Difficulty"></Label>
+                                        <Label Foreground="White" FontSize="20" Content="Difficulty"></Label>
                                     </puc:TextCombo.Info>
                                     <puc:TextCombo.Box>
-                                        <ComboBox Grid.Column="1" FontSize="20" BorderBrush="#FFACACAC" Background="#FFCDCDCD">
+                                        <ComboBox FontSize="20" BorderBrush="#FFACACAC" Background="#FFCDCDCD">
                                             <ComboBoxItem ToolTip="Useful for readjusting to new rank or after extended absence.">Ease in</ComboBoxItem>
                                             <ComboBoxItem ToolTip="Useful for a normal training." IsSelected="True">Normal</ComboBoxItem>
                                             <ComboBoxItem ToolTip="Useful for preparing for a test or tournament.">Test Preparation</ComboBoxItem>
                                         </ComboBox>
                                     </puc:TextCombo.Box>
-                                </puc:TextCombo>-->
+                                </puc:TextCombo>
                                 <Grid Margin="0,0,0,15">
                                     <Grid.ColumnDefinitions>
                                         <ColumnDefinition Width="Auto"/>
@@ -241,7 +241,7 @@
                             </UniformGrid>
                         </Grid>
 
-                        <Grid x:Name="Contents">
+                        <Grid x:Name="MainView">
                             <Grid Name="TranslateView">
                                 <Grid.RowDefinitions>
                                     <RowDefinition Height="*"/>
