@@ -1,0 +1,308 @@
+Attention Stance	"Charyot Sogi<div><img src=""Attention-Stance.jpg""></div>"
+"Charyot Sogi<div><img src=""Attention-Stance.jpg""></div>"	Attention Stance
+Parallel Ready Stance	"Narani Junbi Sogi<div><img src=""PR-stance-arms-angles.jpg""><br></div>"
+"Narani Junbi Sogi<div><img src=""PR-stance-arms-angles.jpg""><br></div>"	Parallel Ready Stance
+Walking Stance	"Gunnon Sogi<br><div><img src=""leftgunnunsogiside.jpg""><br></div>"
+"Gunnon Sogi<br><div><img src=""leftgunnunsogiside.jpg""><br></div>"	Walking Stance
+Sitting Stance	"Annun Sogi<div><img src=""maxresdefault.jpg""><br></div>"
+"Annun Sogi<div><img src=""maxresdefault.jpg""><br></div>"	Sitting Stance
+Junbi	Ready
+Ready	Junbi
+Kyong Ye	Bow
+Bow	Kyong Ye
+Sabumnim	Teacher / Instructor
+Teacher / Instructor	Sabumnim
+Saju Jirugi	4 direction punch
+4 direction punch	Saju Jirugi
+Saju Makgi	4 direction block
+4 direction block	Saju Makgi
+Jirugi	Punch
+Punch	Jirugi
+Annun So Jirugi	Sitting Stance punch
+Sitting Stance punch	Annun So Jirugi
+Sogi	Stance
+Stance	Sogi
+Walking Ready Stance	"Gunnun Junbi Sogi<div><img src=""walking-stance-angle.jpg""></div>"
+"Gunnun Junbi Sogi<div><img src=""walking-stance-angle.jpg""></div>"	Walking Ready Stance
+Walking Stance Punch(middle)	"Gunnun So Jirugi<div><img src=""taekwon-do-middle-punch-8.jpg""><br></div>"
+"Gunnun So Jirugi<div><img src=""taekwon-do-middle-punch-8.jpg""><br></div>"	Walking Stance Punch(middle)
+Walking Stance Low Forearm Block&nbsp;<div>(Walking Forward and Backward)</div>	"Gunnun So Palmok Najunde Makgi<div><img src=""taekwon-do-low-block-1.jpg""></div>"
+"Gunnun So Palmok Najunde Makgi<div><img src=""taekwon-do-low-block-1.jpg""></div>"	Walking Stance Low Forearm Block&nbsp;<div>(Walking Forward and Backward)</div>
+ne	yes<div><br></div>
+yes<div><br></div>	ne
+aniyo	no
+no	aniyo
+ne sabumnim	yes teacher
+yes teacher	ne sabumnim
+aniyo sabumnim	no teacher
+no teacher	aniyo sabumnim
+<div><span class=cloze>[...]</span> dul set net dasot yasot ilgup yodol ahop yeol</div>	<div><span class=cloze>hana</span> dul set net dasot yasot ilgup yodol ahop yeol</div><br> 
+<div>hana <span class=cloze>[...]</span> set net dasot yasot ilgup yodol ahop yeol</div>	<div>hana <span class=cloze>dul</span> set net dasot yasot ilgup yodol ahop yeol</div><br> 
+<div>hana dul <span class=cloze>[...]</span> net dasot yasot ilgup yodol ahop yeol</div>	<div>hana dul <span class=cloze>set</span> net dasot yasot ilgup yodol ahop yeol</div><br> 
+<div>hana dul set <span class=cloze>[...]</span> dasot yasot ilgup yodol ahop yeol</div>	<div>hana dul set <span class=cloze>net</span> dasot yasot ilgup yodol ahop yeol</div><br> 
+<div>hana dul set net <span class=cloze>[...]</span> yasot ilgup yodol ahop yeol</div>	<div>hana dul set net <span class=cloze>dasot</span> yasot ilgup yodol ahop yeol</div><br> 
+<div>hana dul set net dasot <span class=cloze>[...]</span> ilgup yodol ahop yeol</div>	<div>hana dul set net dasot <span class=cloze>yasot</span> ilgup yodol ahop yeol</div><br> 
+<div>hana dul set net dasot yasot <span class=cloze>[...]</span> yodol ahop yeol</div>	<div>hana dul set net dasot yasot <span class=cloze>ilgup</span> yodol ahop yeol</div><br> 
+<div>hana dul set net dasot yasot ilgup <span class=cloze>[...]</span> ahop yeol</div>	<div>hana dul set net dasot yasot ilgup <span class=cloze>yodol</span> ahop yeol</div><br> 
+<div>hana dul set net dasot yasot ilgup yodol <span class=cloze>[...]</span> yeol</div>	<div>hana dul set net dasot yasot ilgup yodol <span class=cloze>ahop</span> yeol</div><br> 
+<div>hana dul set net dasot yasot ilgup yodol ahop <span class=cloze>[...]</span></div>	<div>hana dul set net dasot yasot ilgup yodol ahop <span class=cloze>yeol</span></div><br> 
+hana	1
+1	hana
+dul	2
+2	dul
+set	3
+3	set
+net	4
+dasot	5
+5	dasot
+yasot	6
+6	yasot
+ilgup	7
+7	ilgup
+yodol	8
+8	yodol
+ahop	9
+9	ahop
+yeol	10
+10	yeol
+Chagi/Chagarugi?	Kick
+Kick	Chagi/Chagarugi?
+An palmok kuande magki	Middle-section forearm block (Middle block)<div>/ inner forearm middle block</div>
+Middle-section forearm block (Middle block)<div>/ inner forearm middle block</div>	An palmok kuande magki
+4	net
+Chon-Ji	"The heaven the earth<div>CHon-Ji means literally ""the Heaven the Earth"". It is, in the Orient, interpreted as the creation of the world or the beginning of human history, therefore, it is the initial patterrn played by the beginner. This pattern consists of two similar parts; one to represent the Heaven and the other the Earth.</div>"
+"The heaven the earth<div>CHon-Ji means literally ""the Heaven the Earth"". It is, in the Orient, interpreted as the creation of the world or the beginning of human history, therefore, it is the initial patterrn played by the beginner. This pattern consists of two similar parts; one to represent the Heaven and the other the Earth.</div>"	Chon-Ji
+Kido-Kwan meaning	School of spirit
+School of spirit	Kido-Kwan meaning
+Taekwondo meaning	"<img src=""taekwondo_school.gif"">"
+"<img src=""taekwondo_school.gif"">"	Taekwondo meaning
+when was kidokwan founded	1984
+when was taekwondo founded	April 11 1955
+Who founded taekwondo	General Choi Hong Hi
+niunja sogi	L stance
+L stance	niunja sogi
+<div><b>Student Oath</b></div><div><b><br></b></div><span class=cloze>[...]</span><div><div>2. I shall respect my instructor and all seniors.</div><div>3. I shall never misuse taekwon-do.</div><div>4. I shall be a champion of freedom and justice.</div><div>5. I shall build a more peaceful world.</div></div></div>	<div><b>Student Oath</b></div><div><b><br></b></div><span class=cloze>1. I shall observe the tenets of taekwon-do.<div>Courtesy, Integrity, Perseverance, Self Control, Indomitable Spirit</span><div><div>2. I shall respect my instructor and all seniors.</div><div>3. I shall never misuse taekwon-do.</div><div>4. I shall be a champion of freedom and justice.</div><div>5. I shall build a more peaceful world.</div></div></div><br> 
+<div><b>Student Oath</b></div><div><b><br></b></div>1. I shall observe the tenets of taekwon-do.<div>Courtesy, Integrity, Perseverance, Self Control, Indomitable Spirit<div><div><span class=cloze>[...]</span></div><div>3. I shall never misuse taekwon-do.</div><div>4. I shall be a champion of freedom and justice.</div><div>5. I shall build a more peaceful world.</div></div></div>	<div><b>Student Oath</b></div><div><b><br></b></div>1. I shall observe the tenets of taekwon-do.<div>Courtesy, Integrity, Perseverance, Self Control, Indomitable Spirit<div><div><span class=cloze>2. I shall respect my instructor and all seniors.</span></div><div>3. I shall never misuse taekwon-do.</div><div>4. I shall be a champion of freedom and justice.</div><div>5. I shall build a more peaceful world.</div></div></div><br> 
+<div><b>Student Oath</b></div><div><b><br></b></div>1. I shall observe the tenets of taekwon-do.<div>Courtesy, Integrity, Perseverance, Self Control, Indomitable Spirit<div><div>2. I shall respect my instructor and all seniors.</div><div><span class=cloze>[...]</span></div><div>4. I shall be a champion of freedom and justice.</div><div>5. I shall build a more peaceful world.</div></div></div>	<div><b>Student Oath</b></div><div><b><br></b></div>1. I shall observe the tenets of taekwon-do.<div>Courtesy, Integrity, Perseverance, Self Control, Indomitable Spirit<div><div>2. I shall respect my instructor and all seniors.</div><div><span class=cloze>3. I shall never misuse taekwon-do.</span></div><div>4. I shall be a champion of freedom and justice.</div><div>5. I shall build a more peaceful world.</div></div></div><br> 
+<div><b>Student Oath</b></div><div><b><br></b></div>1. I shall observe the tenets of taekwon-do.<div>Courtesy, Integrity, Perseverance, Self Control, Indomitable Spirit<div><div>2. I shall respect my instructor and all seniors.</div><div>3. I shall never misuse taekwon-do.</div><div><span class=cloze>[...]</span></div><div>5. I shall build a more peaceful world.</div></div></div>	<div><b>Student Oath</b></div><div><b><br></b></div>1. I shall observe the tenets of taekwon-do.<div>Courtesy, Integrity, Perseverance, Self Control, Indomitable Spirit<div><div>2. I shall respect my instructor and all seniors.</div><div>3. I shall never misuse taekwon-do.</div><div><span class=cloze>4. I shall be a champion of freedom and justice.</span></div><div>5. I shall build a more peaceful world.</div></div></div><br> 
+<div><b>Student Oath</b></div><div><b><br></b></div>1. I shall observe the tenets of taekwon-do.<div>Courtesy, Integrity, Perseverance, Self Control, Indomitable Spirit<div><div>2. I shall respect my instructor and all seniors.</div><div>3. I shall never misuse taekwon-do.</div><div>4. I shall be a champion of freedom and justice.</div><div><span class=cloze>[...]</span></div></div></div>	<div><b>Student Oath</b></div><div><b><br></b></div>1. I shall observe the tenets of taekwon-do.<div>Courtesy, Integrity, Perseverance, Self Control, Indomitable Spirit<div><div>2. I shall respect my instructor and all seniors.</div><div>3. I shall never misuse taekwon-do.</div><div>4. I shall be a champion of freedom and justice.</div><div><span class=cloze>5. I shall build a more peaceful world.</span></div></div></div><br> 
+<span class=cloze>[...]</span><div>Integrity</div><div>Perseverance</div><div>Self Control</div><div>Indomitable Spirit</div>	<span class=cloze>Courtesy</span><div>Integrity</div><div>Perseverance</div><div>Self Control</div><div>Indomitable Spirit</div><br> 
+Courtesy<div><span class=cloze>[...]</span></div><div>Perseverance</div><div>Self Control</div><div>Indomitable Spirit</div>	Courtesy<div><span class=cloze>Integrity</span></div><div>Perseverance</div><div>Self Control</div><div>Indomitable Spirit</div><br> 
+Courtesy<div>Integrity</div><div><span class=cloze>[...]</span></div><div>Self Control</div><div>Indomitable Spirit</div>	Courtesy<div>Integrity</div><div><span class=cloze>Perseverance</span></div><div>Self Control</div><div>Indomitable Spirit</div><br> 
+Courtesy<div>Integrity</div><div>Perseverance</div><div><span class=cloze>[...]</span></div><div>Indomitable Spirit</div>	Courtesy<div>Integrity</div><div>Perseverance</div><div><span class=cloze>Self Control</span></div><div>Indomitable Spirit</div><br> 
+Courtesy<div>Integrity</div><div>Perseverance</div><div>Self Control</div><div><span class=cloze>[...]</span></div>	Courtesy<div>Integrity</div><div>Perseverance</div><div>Self Control</div><div><span class=cloze>Indomitable Spirit</span></div><br> 
+Niunja So An Palmok Kuande Magki	"L-Stance Inner Forearm Middle Block<div><img src=""tkd-inner-forearm-block-6.jpg""><br></div>"
+"L-Stance Inner Forearm Middle Block<div><img src=""tkd-inner-forearm-block-6.jpg""><br></div>"	Niunja So An Palmok Kuande Magki
+knife-hand low block	Sonkal Najunde Makgi
+Sonkal Najunde Makgi	knife-hand low block
+Najunde	Low
+Low	Najunde
+Palmok	Foream<div>(1/3 of arm)</div>
+Foream<div>(1/3 of arm)</div>	Palmok
+kuande	middle
+middle	kuande
+chon ji moves	19 moves
+19 moves	chon ji moves
+Saju Jirugi moves:	14 moves
+14 moves	Saju Jirugi moves:
+Saju Magki moves:	16 moves
+16 moves	Saju Magki moves:
+Annun Sogi	"Sitting stance<div><img src=""maxresdefault.jpg""><br></div>"
+"Sitting stance<div><img src=""maxresdefault.jpg""><br></div>"	Annun Sogi
+Kuande An Palmok Magki	Inner forearm middle block /<div>middle inner forearm block</div>
+Inner forearm middle block /<div>middle inner forearm block</div>	Kuande An Palmok Magki
+start	Shi-jak
+Shi-jak	start
+Baro	Return to start
+Return to start	Baro
+Spinning back kick	"<img src=""latest (1).jpg"">"
+"<img src=""latest (1).jpg"">"	Spinning back kick
+White belt meaning	Signifies innocence. No previous knowledge of Taekwon-Do, as that of a beginner student.
+Signifies innocence. No previous knowledge of Taekwon-Do, as that of a beginner student.	White belt meaning
+Yellow belt meaning	Represents the earth where the seed of Taekwon-Do is planted as the foundation of Taekwon-Do is being laid.
+Represents the earth where the seed of Taekwon-Do is planted as the foundation of Taekwon-Do is being laid.	Yellow belt meaning
+Green belt meaning	Represents the green planet growing as the skills of Taekwon-Do develop.
+Represents the green planet growing as the skills of Taekwon-Do develop.	Green belt meaning
+Taekwondo secrets:<br><br><span class=cloze>[...]</span><br><br>2. To understand the purpose and method of each movement clearly.&nbsp;<br><br>3. To bring the action of eyes, hands, feet and breath into one single coordinated action.<br><br>4. To choose the appropriate attacking tool for each vital spot.<br><br>5. To become familiar with the correct angle and distance for attack and defence.&nbsp;<br><br>6. Keep both the arms and legs bent slightly while movement is in motion.&nbsp;<br><br>7. All movements must begin with a backward motion with very few exceptions. However, once the movement is in motion it should not be stopped before reaching the target.&nbsp;<br><br>8. To create sine wave during the movement by utilizing the knee spring.<br><br>9. To exhale briefly at the moment of each blow except a connecting motion.<br>	Taekwondo secrets:<br><br><span class=cloze>1. To study the theory of power thoroughly.</span><br><br>2. To understand the purpose and method of each movement clearly.&nbsp;<br><br>3. To bring the action of eyes, hands, feet and breath into one single coordinated action.<br><br>4. To choose the appropriate attacking tool for each vital spot.<br><br>5. To become familiar with the correct angle and distance for attack and defence.&nbsp;<br><br>6. Keep both the arms and legs bent slightly while movement is in motion.&nbsp;<br><br>7. All movements must begin with a backward motion with very few exceptions. However, once the movement is in motion it should not be stopped before reaching the target.&nbsp;<br><br>8. To create sine wave during the movement by utilizing the knee spring.<br><br>9. To exhale briefly at the moment of each blow except a connecting motion.<br><br> 
+Taekwondo secrets:<br><br>1. To study the theory of power thoroughly.<br><br><span class=cloze>[...]</span><br><br>3. To bring the action of eyes, hands, feet and breath into one single coordinated action.<br><br>4. To choose the appropriate attacking tool for each vital spot.<br><br>5. To become familiar with the correct angle and distance for attack and defence.&nbsp;<br><br>6. Keep both the arms and legs bent slightly while movement is in motion.&nbsp;<br><br>7. All movements must begin with a backward motion with very few exceptions. However, once the movement is in motion it should not be stopped before reaching the target.&nbsp;<br><br>8. To create sine wave during the movement by utilizing the knee spring.<br><br>9. To exhale briefly at the moment of each blow except a connecting motion.<br>	Taekwondo secrets:<br><br>1. To study the theory of power thoroughly.<br><br><span class=cloze>2. To understand the purpose and method of each movement clearly.&nbsp;</span><br><br>3. To bring the action of eyes, hands, feet and breath into one single coordinated action.<br><br>4. To choose the appropriate attacking tool for each vital spot.<br><br>5. To become familiar with the correct angle and distance for attack and defence.&nbsp;<br><br>6. Keep both the arms and legs bent slightly while movement is in motion.&nbsp;<br><br>7. All movements must begin with a backward motion with very few exceptions. However, once the movement is in motion it should not be stopped before reaching the target.&nbsp;<br><br>8. To create sine wave during the movement by utilizing the knee spring.<br><br>9. To exhale briefly at the moment of each blow except a connecting motion.<br><br> 
+Taekwondo secrets:<br><br>1. To study the theory of power thoroughly.<br><br>2. To understand the purpose and method of each movement clearly.&nbsp;<br><br><span class=cloze>[...]</span><br><br>4. To choose the appropriate attacking tool for each vital spot.<br><br>5. To become familiar with the correct angle and distance for attack and defence.&nbsp;<br><br>6. Keep both the arms and legs bent slightly while movement is in motion.&nbsp;<br><br>7. All movements must begin with a backward motion with very few exceptions. However, once the movement is in motion it should not be stopped before reaching the target.&nbsp;<br><br>8. To create sine wave during the movement by utilizing the knee spring.<br><br>9. To exhale briefly at the moment of each blow except a connecting motion.<br>	Taekwondo secrets:<br><br>1. To study the theory of power thoroughly.<br><br>2. To understand the purpose and method of each movement clearly.&nbsp;<br><br><span class=cloze>3. To bring the action of eyes, hands, feet and breath into one single coordinated action.</span><br><br>4. To choose the appropriate attacking tool for each vital spot.<br><br>5. To become familiar with the correct angle and distance for attack and defence.&nbsp;<br><br>6. Keep both the arms and legs bent slightly while movement is in motion.&nbsp;<br><br>7. All movements must begin with a backward motion with very few exceptions. However, once the movement is in motion it should not be stopped before reaching the target.&nbsp;<br><br>8. To create sine wave during the movement by utilizing the knee spring.<br><br>9. To exhale briefly at the moment of each blow except a connecting motion.<br><br> 
+Taekwondo secrets:<br><br>1. To study the theory of power thoroughly.<br><br>2. To understand the purpose and method of each movement clearly.&nbsp;<br><br>3. To bring the action of eyes, hands, feet and breath into one single coordinated action.<br><br><span class=cloze>[...]</span><br><br>5. To become familiar with the correct angle and distance for attack and defence.&nbsp;<br><br>6. Keep both the arms and legs bent slightly while movement is in motion.&nbsp;<br><br>7. All movements must begin with a backward motion with very few exceptions. However, once the movement is in motion it should not be stopped before reaching the target.&nbsp;<br><br>8. To create sine wave during the movement by utilizing the knee spring.<br><br>9. To exhale briefly at the moment of each blow except a connecting motion.<br>	Taekwondo secrets:<br><br>1. To study the theory of power thoroughly.<br><br>2. To understand the purpose and method of each movement clearly.&nbsp;<br><br>3. To bring the action of eyes, hands, feet and breath into one single coordinated action.<br><br><span class=cloze>4. To choose the appropriate attacking tool for each vital spot.</span><br><br>5. To become familiar with the correct angle and distance for attack and defence.&nbsp;<br><br>6. Keep both the arms and legs bent slightly while movement is in motion.&nbsp;<br><br>7. All movements must begin with a backward motion with very few exceptions. However, once the movement is in motion it should not be stopped before reaching the target.&nbsp;<br><br>8. To create sine wave during the movement by utilizing the knee spring.<br><br>9. To exhale briefly at the moment of each blow except a connecting motion.<br><br> 
+Taekwondo secrets:<br><br>1. To study the theory of power thoroughly.<br><br>2. To understand the purpose and method of each movement clearly.&nbsp;<br><br>3. To bring the action of eyes, hands, feet and breath into one single coordinated action.<br><br>4. To choose the appropriate attacking tool for each vital spot.<br><br><span class=cloze>[...]</span><br><br>6. Keep both the arms and legs bent slightly while movement is in motion.&nbsp;<br><br>7. All movements must begin with a backward motion with very few exceptions. However, once the movement is in motion it should not be stopped before reaching the target.&nbsp;<br><br>8. To create sine wave during the movement by utilizing the knee spring.<br><br>9. To exhale briefly at the moment of each blow except a connecting motion.<br>	Taekwondo secrets:<br><br>1. To study the theory of power thoroughly.<br><br>2. To understand the purpose and method of each movement clearly.&nbsp;<br><br>3. To bring the action of eyes, hands, feet and breath into one single coordinated action.<br><br>4. To choose the appropriate attacking tool for each vital spot.<br><br><span class=cloze>5. To become familiar with the correct angle and distance for attack and defence.&nbsp;</span><br><br>6. Keep both the arms and legs bent slightly while movement is in motion.&nbsp;<br><br>7. All movements must begin with a backward motion with very few exceptions. However, once the movement is in motion it should not be stopped before reaching the target.&nbsp;<br><br>8. To create sine wave during the movement by utilizing the knee spring.<br><br>9. To exhale briefly at the moment of each blow except a connecting motion.<br><br> 
+Taekwondo secrets:<br><br>1. To study the theory of power thoroughly.<br><br>2. To understand the purpose and method of each movement clearly.&nbsp;<br><br>3. To bring the action of eyes, hands, feet and breath into one single coordinated action.<br><br>4. To choose the appropriate attacking tool for each vital spot.<br><br>5. To become familiar with the correct angle and distance for attack and defence.&nbsp;<br><br><span class=cloze>[...]</span><br><br>7. All movements must begin with a backward motion with very few exceptions. However, once the movement is in motion it should not be stopped before reaching the target.&nbsp;<br><br>8. To create sine wave during the movement by utilizing the knee spring.<br><br>9. To exhale briefly at the moment of each blow except a connecting motion.<br>	Taekwondo secrets:<br><br>1. To study the theory of power thoroughly.<br><br>2. To understand the purpose and method of each movement clearly.&nbsp;<br><br>3. To bring the action of eyes, hands, feet and breath into one single coordinated action.<br><br>4. To choose the appropriate attacking tool for each vital spot.<br><br>5. To become familiar with the correct angle and distance for attack and defence.&nbsp;<br><br><span class=cloze>6. Keep both the arms and legs bent slightly while movement is in motion.&nbsp;</span><br><br>7. All movements must begin with a backward motion with very few exceptions. However, once the movement is in motion it should not be stopped before reaching the target.&nbsp;<br><br>8. To create sine wave during the movement by utilizing the knee spring.<br><br>9. To exhale briefly at the moment of each blow except a connecting motion.<br><br> 
+Taekwondo secrets:<br><br>1. To study the theory of power thoroughly.<br><br>2. To understand the purpose and method of each movement clearly.&nbsp;<br><br>3. To bring the action of eyes, hands, feet and breath into one single coordinated action.<br><br>4. To choose the appropriate attacking tool for each vital spot.<br><br>5. To become familiar with the correct angle and distance for attack and defence.&nbsp;<br><br>6. Keep both the arms and legs bent slightly while movement is in motion.&nbsp;<br><br><span class=cloze>[...]</span><br><br>8. To create sine wave during the movement by utilizing the knee spring.<br><br>9. To exhale briefly at the moment of each blow except a connecting motion.<br>	Taekwondo secrets:<br><br>1. To study the theory of power thoroughly.<br><br>2. To understand the purpose and method of each movement clearly.&nbsp;<br><br>3. To bring the action of eyes, hands, feet and breath into one single coordinated action.<br><br>4. To choose the appropriate attacking tool for each vital spot.<br><br>5. To become familiar with the correct angle and distance for attack and defence.&nbsp;<br><br>6. Keep both the arms and legs bent slightly while movement is in motion.&nbsp;<br><br><span class=cloze>7. All movements must begin with a backward motion with very few exceptions. However, once the movement is in motion it should not be stopped before reaching the target.&nbsp;</span><br><br>8. To create sine wave during the movement by utilizing the knee spring.<br><br>9. To exhale briefly at the moment of each blow except a connecting motion.<br><br> 
+Taekwondo secrets:<br><br>1. To study the theory of power thoroughly.<br><br>2. To understand the purpose and method of each movement clearly.&nbsp;<br><br>3. To bring the action of eyes, hands, feet and breath into one single coordinated action.<br><br>4. To choose the appropriate attacking tool for each vital spot.<br><br>5. To become familiar with the correct angle and distance for attack and defence.&nbsp;<br><br>6. Keep both the arms and legs bent slightly while movement is in motion.&nbsp;<br><br>7. All movements must begin with a backward motion with very few exceptions. However, once the movement is in motion it should not be stopped before reaching the target.&nbsp;<br><br><span class=cloze>[...]</span><br><br>9. To exhale briefly at the moment of each blow except a connecting motion.<br>	Taekwondo secrets:<br><br>1. To study the theory of power thoroughly.<br><br>2. To understand the purpose and method of each movement clearly.&nbsp;<br><br>3. To bring the action of eyes, hands, feet and breath into one single coordinated action.<br><br>4. To choose the appropriate attacking tool for each vital spot.<br><br>5. To become familiar with the correct angle and distance for attack and defence.&nbsp;<br><br>6. Keep both the arms and legs bent slightly while movement is in motion.&nbsp;<br><br>7. All movements must begin with a backward motion with very few exceptions. However, once the movement is in motion it should not be stopped before reaching the target.&nbsp;<br><br><span class=cloze>8. To create sine wave during the movement by utilizing the knee spring.</span><br><br>9. To exhale briefly at the moment of each blow except a connecting motion.<br><br> 
+Taekwondo secrets:<br><br>1. To study the theory of power thoroughly.<br><br>2. To understand the purpose and method of each movement clearly.&nbsp;<br><br>3. To bring the action of eyes, hands, feet and breath into one single coordinated action.<br><br>4. To choose the appropriate attacking tool for each vital spot.<br><br>5. To become familiar with the correct angle and distance for attack and defence.&nbsp;<br><br>6. Keep both the arms and legs bent slightly while movement is in motion.&nbsp;<br><br>7. All movements must begin with a backward motion with very few exceptions. However, once the movement is in motion it should not be stopped before reaching the target.&nbsp;<br><br>8. To create sine wave during the movement by utilizing the knee spring.<br><br><span class=cloze>[...]</span><br>	Taekwondo secrets:<br><br>1. To study the theory of power thoroughly.<br><br>2. To understand the purpose and method of each movement clearly.&nbsp;<br><br>3. To bring the action of eyes, hands, feet and breath into one single coordinated action.<br><br>4. To choose the appropriate attacking tool for each vital spot.<br><br>5. To become familiar with the correct angle and distance for attack and defence.&nbsp;<br><br>6. Keep both the arms and legs bent slightly while movement is in motion.&nbsp;<br><br>7. All movements must begin with a backward motion with very few exceptions. However, once the movement is in motion it should not be stopped before reaching the target.&nbsp;<br><br>8. To create sine wave during the movement by utilizing the knee spring.<br><br><span class=cloze>9. To exhale briefly at the moment of each blow except a connecting motion.</span><br><br> 
+dan gun	Dan Gun is named after the Holy Dan Gun, the legendary founder of Korea in the year 2333 BC.
+dan gun moves	21 moves
+<span class=cloze>[...]</span><div>dul</div><div>set</div><div>net</div><div>dasot</div><div>yasot</div><div>ilgup</div><div>yodol<br></div><div>ahop</div><div>yeol</div>	<span class=cloze>Hana</span><div>dul</div><div>set</div><div>net</div><div>dasot</div><div>yasot</div><div>ilgup</div><div>yodol<br></div><div>ahop</div><div>yeol</div><br> 
+Hana<div><span class=cloze>[...]</span></div><div>set</div><div>net</div><div>dasot</div><div>yasot</div><div>ilgup</div><div>yodol<br></div><div>ahop</div><div>yeol</div>	Hana<div><span class=cloze>dul</span></div><div>set</div><div>net</div><div>dasot</div><div>yasot</div><div>ilgup</div><div>yodol<br></div><div>ahop</div><div>yeol</div><br> 
+Hana<div>dul</div><div><span class=cloze>[...]</span></div><div>net</div><div>dasot</div><div>yasot</div><div>ilgup</div><div>yodol<br></div><div>ahop</div><div>yeol</div>	Hana<div>dul</div><div><span class=cloze>set</span></div><div>net</div><div>dasot</div><div>yasot</div><div>ilgup</div><div>yodol<br></div><div>ahop</div><div>yeol</div><br> 
+Hana<div>dul</div><div>set</div><div><span class=cloze>[...]</span></div><div>dasot</div><div>yasot</div><div>ilgup</div><div>yodol<br></div><div>ahop</div><div>yeol</div>	Hana<div>dul</div><div>set</div><div><span class=cloze>net</span></div><div>dasot</div><div>yasot</div><div>ilgup</div><div>yodol<br></div><div>ahop</div><div>yeol</div><br> 
+Hana<div>dul</div><div>set</div><div>net</div><div><span class=cloze>[...]</span></div><div>yasot</div><div>ilgup</div><div>yodol<br></div><div>ahop</div><div>yeol</div>	Hana<div>dul</div><div>set</div><div>net</div><div><span class=cloze>dasot</span></div><div>yasot</div><div>ilgup</div><div>yodol<br></div><div>ahop</div><div>yeol</div><br> 
+Hana<div>dul</div><div>set</div><div>net</div><div>dasot</div><div><span class=cloze>[...]</span></div><div>ilgup</div><div>yodol<br></div><div>ahop</div><div>yeol</div>	Hana<div>dul</div><div>set</div><div>net</div><div>dasot</div><div><span class=cloze>yasot</span></div><div>ilgup</div><div>yodol<br></div><div>ahop</div><div>yeol</div><br> 
+Hana<div>dul</div><div>set</div><div>net</div><div>dasot</div><div>yasot</div><div><span class=cloze>[...]</span></div><div>yodol<br></div><div>ahop</div><div>yeol</div>	Hana<div>dul</div><div>set</div><div>net</div><div>dasot</div><div>yasot</div><div><span class=cloze>ilgup</span></div><div>yodol<br></div><div>ahop</div><div>yeol</div><br> 
+Hana<div>dul</div><div>set</div><div>net</div><div>dasot</div><div>yasot</div><div>ilgup</div><div><span class=cloze>[...]</span><br></div><div>ahop</div><div>yeol</div>	Hana<div>dul</div><div>set</div><div>net</div><div>dasot</div><div>yasot</div><div>ilgup</div><div><span class=cloze>yodol</span><br></div><div>ahop</div><div>yeol</div><br> 
+Hana<div>dul</div><div>set</div><div>net</div><div>dasot</div><div>yasot</div><div>ilgup</div><div>yodol<br></div><div><span class=cloze>[...]</span></div><div>yeol</div>	Hana<div>dul</div><div>set</div><div>net</div><div>dasot</div><div>yasot</div><div>ilgup</div><div>yodol<br></div><div><span class=cloze>ahop</span></div><div>yeol</div><br> 
+Hana<div>dul</div><div>set</div><div>net</div><div>dasot</div><div>yasot</div><div>ilgup</div><div>yodol<br></div><div>ahop</div><div><span class=cloze>[...]</span></div>	Hana<div>dul</div><div>set</div><div>net</div><div>dasot</div><div>yasot</div><div>ilgup</div><div>yodol<br></div><div>ahop</div><div><span class=cloze>yeol</span></div><br> 
+Inner forearm block look	"<img src=""tkd-inner-forearm-block-1.jpg"">"
+"<img src=""tkd-inner-forearm-block-1.jpg"">"	Inner forearm block look
+Forearm guarding block look	"<img src=""Won-Hyo+27.bmp"">"
+"<img src=""Won-Hyo+27.bmp"">"	Forearm guarding block look
+yop chagi	side piercing kick
+side piercing kick	yop chagi
+Twin forearm block look	"<img src=""DSC019155.JPG"">"
+"<img src=""DSC019155.JPG"">"	Twin forearm block look
+Double motion front snap kick	"<img src=""maxresdefault-72.jpg"">"
+"<img src=""maxresdefault-72.jpg"">"	Double motion front snap kick
+First Exercise	Saju jirugi
+saju jirugi is	first exercise
+2nd exercise	saju magki
+saju magki is	2nd exercise
+1st pattern	chon ji
+chon ji is	1st pattern
+dan gun is	2nd pattern
+2nd pattern	dan gun
+"L-Stance Knifehand Guarding Block<div><img src=""middle-guarding-block-2.jpg""><br></div>"	Niunja So Sonkal Daebi Makgi
+Niunja So Sonkal Daebi Makgi	"L-Stance Knifehand Guarding Block<div><img src=""middle-guarding-block-2.jpg""><br></div>"
+"L-Stance Twin Outer Forearm Block<div><img src=""tkd-twin-forearm-block-3.jpg""><br></div>"	Niunja So Sang Palmok Magki
+Niunja So Sang Palmok Magki	"L-Stance Twin Outer Forearm Block<div><img src=""tkd-twin-forearm-block-3.jpg""><br></div>"
+Gunnon So Palmok Chukyo Makgi	"Walking Stance Forearm Rising Block<div><img src=""tkd-forearm-rising-block-1.jpg""><br></div>"
+"Walking Stance Forearm Rising Block<div><img src=""tkd-forearm-rising-block-1.jpg""><br></div>"	Gunnon So Palmok Chukyo Makgi
+Gunnon So Napunde Jirugi	Walking Stance High Punch
+Walking Stance High Punch	Gunnon So Napunde Jirugi
+Napunde	High
+High	Napunde
+Chukyo	Rising
+Rising	Chukyo
+Daebi	Guarding
+Guarding	Daebi
+Niunja So Sonkal Kuande Yop Taerigi	"L-Stance Knifehand Middle Side Strike<div><img src=""outward-knife-hand-strike-2.jpg""><br></div>"
+"L-Stance Knifehand Middle Side Strike<div><img src=""outward-knife-hand-strike-2.jpg""><br></div>"	Niunja So Sonkal Kuande Yop Taerigi
+Yop	Side
+Side	Yop
+Taerigi	Strike
+Strike	Taerigi
+Founder of Ki Do Kwan School of Taekwondo	Grand Master Roy Sullivan, 9th Degree
+Grand Master Roy Sullivan, 9th Degree	Founder of Ki Do Kwan School of Taekwondo
+KI DO KWAN meaning	Gym of Spirit
+Gym of Spirit	KI DO KWAN meaning
+3 step sparring measurer steps:	back
+3 step sparring puncher's feet on;	right
+3 step sparring blocker's feet on:	right
+3 step sparring feet on:	right
+end of 3 step sparring puncher steps:	back
+end of 3 step sparring blocker steps:	forward
+3 step sparring puncher first:	blocks backward
+3 step sparring puncher is same as	measurer
+Instructor's job:	To make real black belts
+How good are you?	The very best
+Kuande apcha busigi / Ap chagi	front snap kick
+front snap kick	Kuande apcha busigi / Ap chagi
+3rd pattern	Do San is
+Do San is	3rd pattern
+Do San	DO-SAN is the pseudonym of the patriot Ahn Chang-Ho (1876-1938) The 24 movements represent his entire life which he devoted to furthering the education of Korea and its independence movement
+Gujari Dolgi	Spot Turning
+Spot Turning	Gujari Dolgi
+Do san moves	24 moves
+24 moves	Do san moves
+Gunnon so bakat palmok nopunde yop makgi	"Walking stance outer forearm high side block<div><img src=""Outer-forearm-high-side-block-2.jpg""><br></div>"
+"Walking stance outer forearm high side block<div><img src=""Outer-forearm-high-side-block-2.jpg""><br></div>"	Gunnon so bakat palmok nopunde yop makgi
+Gunnon so bakat palmok nopunde hechyo makgi	"Walking stance outer forearm high wedge block<div><img src=""latest (3).jpg""><br></div>"
+"Walking stance outer forearm high wedge block<div><img src=""latest (3).jpg""><br></div>"	Gunnon so bakat palmok nopunde hechyo makgi
+courtesy	Ye Ui
+Ye Ui	courtesy
+Integrity	Yom Chi
+Yom Chi	Integrity
+Perserverance	In Nae
+In Nae	Perserverance
+Self Control	Guk Gi
+Guk Gi	Self Control
+Indomidable Spirit	Baekjul Boolgool
+Baekjul Boolgool	Indomidable Spirit
+<span class=cloze>[...]</span><div>Yom Chi</div><div>In Nae</div><div>Guk Gi</div><div>Baekjool Boolgool</div>	<span class=cloze>Ye Ui</span><div>Yom Chi</div><div>In Nae</div><div>Guk Gi</div><div>Baekjool Boolgool</div><br> 
+Ye Ui<div><span class=cloze>[...]</span></div><div>In Nae</div><div>Guk Gi</div><div>Baekjool Boolgool</div>	Ye Ui<div><span class=cloze>Yom Chi</span></div><div>In Nae</div><div>Guk Gi</div><div>Baekjool Boolgool</div><br> 
+Ye Ui<div>Yom Chi</div><div><span class=cloze>[...]</span></div><div>Guk Gi</div><div>Baekjool Boolgool</div>	Ye Ui<div>Yom Chi</div><div><span class=cloze>In Nae</span></div><div>Guk Gi</div><div>Baekjool Boolgool</div><br> 
+Ye Ui<div>Yom Chi</div><div>In Nae</div><div><span class=cloze>[...]</span></div><div>Baekjool Boolgool</div>	Ye Ui<div>Yom Chi</div><div>In Nae</div><div><span class=cloze>Guk Gi</span></div><div>Baekjool Boolgool</div><br> 
+Ye Ui<div>Yom Chi</div><div>In Nae</div><div>Guk Gi</div><div><span class=cloze>[...]</span></div>	Ye Ui<div>Yom Chi</div><div>In Nae</div><div>Guk Gi</div><div><span class=cloze>Baekjool Boolgool</span></div><br> 
+Sun Sonkut Tulgi	"Straight Fingertip Thrust<div><img src=""latest (2).jpg""><br></div>"
+"Straight Fingertip Thrust<div><img src=""latest (2).jpg""><br></div>"	Sun Sonkut Tulgi
+Gunnon So Dung Joomuk Nopunde Yop Taerigi	"Walking Stance Backfist High Side Strike<div><img src=""maxresdefault (2).jpg""><br></div>"
+"Walking Stance Backfist High Side Strike<div><img src=""maxresdefault (2).jpg""><br></div>"	Gunnon So Dung Joomuk Nopunde Yop Taerigi
+Kuande Apcha Busigi	"Middle Front Snap Kick<div><img src=""899b585ce4bc943b20a53c912487340d.jpg""><br></div>"
+"Middle Front Snap Kick<div><img src=""899b585ce4bc943b20a53c912487340d.jpg""><br></div>"	Kuande Apcha Busigi
+Annun&nbsp; So Sonkal Yop Taerigi	"Sitting Stance Knifehand Side Strike<div><img src=""KnifeHand-strike-Sitting-St.jpg""><br></div>"
+"Sitting Stance Knifehand Side Strike<div><img src=""KnifeHand-strike-Sitting-St.jpg""><br></div>"	Annun&nbsp; So Sonkal Yop Taerigi
+Tenet #1	Courtesy - Ye Ui
+Tenet #2	Integrity - Yom Chi
+Tenet #3	Perseverance - In Nae
+Tenet #4	Self Control - Guk Gi
+Tenet #5	Indomidable Spirit - Baekjul Boolgool
+Who founded korea?	Dan Gun
+when was korea founded?	2333 BC
+"Backfist<div><img src=""K640_01-Ap-Chigi-Back-Fist-Strike-e1508962998155.jpg""><br></div>"	Dung Joomuk
+Dung Joomuk	"Backfist<div><img src=""K640_01-Ap-Chigi-Back-Fist-Strike-e1508962998155.jpg""><br></div>"
+Walking Stance Punch Facing	Full facing (all)
+Full facing (all)	Walking Stance Punch Facing
+Walking Stance Block facing	Shoulders half facing<div>Hips full facing</div>
+Shoulders half facing<div>Hips full facing</div>	Walking Stance Block facing
+L Stance facing	Half facing (all)
+Half facing (all)	L Stance facing
+bow to black belt	30 degrees<div>medium distance</div><div>look at chest</div><div>up when blackbelt up</div>
+bow to coloured belt	15 degrees<div>short distance</div><div>look at eyes</div>
+bow to grandmaster	45 degrees<div>long distance</div><div>look at feet</div><div>up when grandmaster up</div>
+bandai	reverse
+reverse	bandai
+tournament legal spots	<div>face</div><div>armpit</div><div>side of body</div><div>chest</div><div>arms</div>
+Ahn Chang-Ho lifespan	1876<div>1938</div>
+Narani junbi sogi to<div>Annun so jirugi</div>	Feet arc<div>Hands attach, 1 detaches</div>
+yong gi logo parts<div><span class=cloze>[...]</span></div><div>taekwondo (in korean)</div><div>zen (surrounds, in white)</div>	yong gi logo parts<div><span class=cloze>student (stick out)</span></div><div>taekwondo (in korean)</div><div>zen (surrounds, in white)</div><br> 
+yong gi logo parts<div>student (stick out)</div><div><span class=cloze>[...]</span></div><div>zen (surrounds, in white)</div>	yong gi logo parts<div>student (stick out)</div><div><span class=cloze>taekwondo (in korean)</span></div><div>zen (surrounds, in white)</div><br> 
+yong gi logo parts<div>student (stick out)</div><div>taekwondo (in korean)</div><div><span class=cloze>[...]</span></div>	yong gi logo parts<div>student (stick out)</div><div>taekwondo (in korean)</div><div><span class=cloze>zen (surrounds, in white)</span></div><br> 
+Won Hyo	Won Hyo was the noted monk whp introduced Buddhism to the Silla dynasty in the year 686 AD
+Won Hyo moves	28 moves
+Taekwondo History &amp; Meaning	"Who does ""Taekwondo-Do"" mean? The word ""Tae"" means foot, ""Kwon"" means fist, ""Do means ""way of"". Therefore Taekwondo in literal interpretation means ""the way of the foot and fist""."
+Won-Hyo is&nbsp;	4th pattern
+4th pattern	Won-Hyo is
+Moa Sogi	"Close Stance<div><img src=""paste-569fc52729c07d2cefc1b9eb1686d85504300225.jpg""><br></div>"
+Moa Junbi Sogi A	"Close Ready Stance A<div><img src=""paste-98609324f0341393a5e4e88d6368b7f0b0964d94.jpg""><br></div>"
+Gojung Sogi	"Fixed Stance<div><img src=""paste-aca04d17387e60813169c769547f40323e64de68.jpg""><br></div>"
+Gobooryo Sogi	"Bending Stance<div><img src=""paste-bc81bf17da705640ca2f2cab1316b51204872b4d.jpg""><br></div>"
+Gobooryo Junbi Sogi A	"Bending Ready Stance A<div><img src=""paste-bd15a386c4a5dcbf6a71575b99e0ba78b3e5fabc.jpg""><br></div>"
+Palmok Dollimyo Makgi	"Forearm Circular Block<div><img src=""paste-1543109948763091b5466259752e470a89c7968c.jpg""><br></div>"
+Niunja So Palmok Kuande Daebi Makgi	L-Stance Forearm Middle Guarding Block
+Niunja So Sonkal Nopunde Anuro Taerigi	"L-Stance Knifehand High Inward Strike<div><img src=""paste-359c3aec9ffe484464d442812a3ebd4c99b22b1f.jpg""><br></div>"
+Gojung So Kuande Jirugi	"Fixed Stance Middle Punch<div><img src=""paste-5c9c58c6f4d9e9bbb1aa9a69133be785f933a847.jpg""><br></div>"
+Gunnon So Bande Jirugi	Walking Stance Reverse Punch
+Kuande Yopcha Jirugi	Middle SIde Piercing Kick
+Najunde Apcha Busigi	Low Front Snap Kick
+Charyot Chon SI Jaa Nim Ke . . . Kyong Ye	bow to founder (General Choi Hong Hi)
+bow to founder (General Choi Hong Hi)	Charyot Chon SI Jaa Nim Ke . . . Kyong Ye
+Low Front Snap Kick	Najunde Apcha Busigi
+Middle SIde Piercing Kick	Kuande Yopcha Jirugi
+Walking Stance Reverse Punch	Gunnon So Bande Jirugi
+"Fixed Stance Middle Punch<div><img src=""paste-5c9c58c6f4d9e9bbb1aa9a69133be785f933a847.jpg""><br></div>"	Gojung So Kuande Jirugi
+"L-Stance Knifehand High Inward Strike<div><img src=""paste-359c3aec9ffe484464d442812a3ebd4c99b22b1f.jpg""><br></div>"	Niunja So Sonkal Nopunde Anuro Taerigi
+L-Stance Forearm Middle Guarding Block	Niunja So Palmok Kuande Daebi Makgi
+"Forearm Circular Block<div><img src=""paste-1543109948763091b5466259752e470a89c7968c.jpg""><br></div>"	Palmok Dollimyo Makgi
+"Bending Ready Stance A<div><img src=""paste-bd15a386c4a5dcbf6a71575b99e0ba78b3e5fabc.jpg""><br></div>"	Gobooryo Junbi Sogi A
+"Bending Stance<div><img src=""paste-bc81bf17da705640ca2f2cab1316b51204872b4d.jpg""><br></div>"	Gobooryo Sogi
+"Fixed Stance<div><img src=""paste-aca04d17387e60813169c769547f40323e64de68.jpg""><br></div>"	Gojung Sogi
+"Close Ready Stance A<div><img src=""paste-98609324f0341393a5e4e88d6368b7f0b0964d94.jpg""><br></div>"	Moa Junbi Sogi A
+"Close Stance<div><img src=""paste-569fc52729c07d2cefc1b9eb1686d85504300225.jpg""><br></div>"	Moa Sogi
+Won-Hyo is	4th pattern
+28 moves	Won Hyo moves
+Sasun Nim Ke . . . Kyong Ye	to Grandmaster
+Sahyun Nim Ke . . . Kyong Ye	to Master (Black Belt)
+Sabunim Ke . . . Kyong Ye	to 4-6th Dan Instructor<br>()
+Boo-Sabumnim Ke . . . Kyong Ye	to Assistant Instructor
+When was ITF founded?	April 11 1955
+<div>Excercises</div><div><span class=cloze>[...]</span></div><div>2. Saju Makgi</div><div><br></div><div>Patterns</div><div>1. Chon-Ji</div><div>2. Dan Gun</div><div>3. Do-San</div><div>4. Won-Hyo</div>	<div>Excercises</div><div><span class=cloze>1. Saju Jirugi</span></div><div>2. Saju Makgi</div><div><br></div><div>Patterns</div><div>1. Chon-Ji</div><div>2. Dan Gun</div><div>3. Do-San</div><div>4. Won-Hyo</div><br> 
+<div>Excercises</div><div>1. Saju Jirugi</div><div><span class=cloze>[...]</span></div><div><br></div><div>Patterns</div><div>1. Chon-Ji</div><div>2. Dan Gun</div><div>3. Do-San</div><div>4. Won-Hyo</div>	<div>Excercises</div><div>1. Saju Jirugi</div><div><span class=cloze>2. Saju Makgi</span></div><div><br></div><div>Patterns</div><div>1. Chon-Ji</div><div>2. Dan Gun</div><div>3. Do-San</div><div>4. Won-Hyo</div><br> 
+<div>Excercises</div><div>1. Saju Jirugi</div><div>2. Saju Makgi</div><div><br></div><div>Patterns</div><div><span class=cloze>[...]</span></div><div>2. Dan Gun</div><div>3. Do-San</div><div>4. Won-Hyo</div>	<div>Excercises</div><div>1. Saju Jirugi</div><div>2. Saju Makgi</div><div><br></div><div>Patterns</div><div><span class=cloze>1. Chon-Ji</span></div><div>2. Dan Gun</div><div>3. Do-San</div><div>4. Won-Hyo</div><br> 
+<div>Excercises</div><div>1. Saju Jirugi</div><div>2. Saju Makgi</div><div><br></div><div>Patterns</div><div>1. Chon-Ji</div><div><span class=cloze>[...]</span></div><div>3. Do-San</div><div>4. Won-Hyo</div>	<div>Excercises</div><div>1. Saju Jirugi</div><div>2. Saju Makgi</div><div><br></div><div>Patterns</div><div>1. Chon-Ji</div><div><span class=cloze>2. Dan Gun</span></div><div>3. Do-San</div><div>4. Won-Hyo</div><br> 
+<div>Excercises</div><div>1. Saju Jirugi</div><div>2. Saju Makgi</div><div><br></div><div>Patterns</div><div>1. Chon-Ji</div><div>2. Dan Gun</div><div><span class=cloze>[...]</span></div><div>4. Won-Hyo</div>	<div>Excercises</div><div>1. Saju Jirugi</div><div>2. Saju Makgi</div><div><br></div><div>Patterns</div><div>1. Chon-Ji</div><div>2. Dan Gun</div><div><span class=cloze>3. Do-San</span></div><div>4. Won-Hyo</div><br> 
+<div>Excercises</div><div>1. Saju Jirugi</div><div>2. Saju Makgi</div><div><br></div><div>Patterns</div><div>1. Chon-Ji</div><div>2. Dan Gun</div><div>3. Do-San</div><div><span class=cloze>[...]</span></div>	<div>Excercises</div><div>1. Saju Jirugi</div><div>2. Saju Makgi</div><div><br></div><div>Patterns</div><div>1. Chon-Ji</div><div>2. Dan Gun</div><div>3. Do-San</div><div><span class=cloze>4. Won-Hyo</span></div><br> 
+what organization is Yong-Gi School of Taekwondo part of?	ITF-TAO
+TAO meaning	the Authentic and Original?
+when what ITF TAO founded?	
+Yong Gi meaning	courage
