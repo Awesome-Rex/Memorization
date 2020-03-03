@@ -5,28 +5,40 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:Practice_Dojang.Resources.Views.UserControls"
              mc:Ignorable="d" 
+             
+             xmlns:converters="clr-namespace:Practice_Dojang.Resources.Scripts.ViewModels.Converters"
+             
              d:DesignHeight="750" d:DesignWidth="1200"
              
             DataContext="{Binding RelativeSource={RelativeSource Self}}">
-    <Grid Name="Background">
-        <Grid.Background>
-            <SolidColorBrush Color="Black" Opacity="100"/>
-        </Grid.Background>
+    <Grid>
+        <Grid Background="{Binding backgroundColour}">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition Height="{Binding ImageSize.Y}"/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="{Binding ImageSize.X}"/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
 
-        <Image Source="{Binding image}" RenderTransformOrigin="0.5,0.5">
-            <Image.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform/>
-                    <RotateTransform/>
-                    <TranslateTransform X="{Binding imageOffset.X}" Y="{Binding imageOffset.Y}"/>
-                </TransformGroup>
-            </Image.RenderTransform>
-        </Image>
+            <Image Source="{Binding image}" RenderTransformOrigin="0.5,0.5" Grid.Column="1" Grid.Row="1">
+                <Image.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform/>
+                        <TranslateTransform X="{Binding imageOffset.X}" Y="{Binding imageOffset.Y}"/>
+                    </TransformGroup>
+                </Image.RenderTransform>
+            </Image>
+        </Grid>
 
         <Grid Name="Overlay">
             <Grid.Background>
-                <SolidColorBrush Color="Black" Opacity="0.01"/>
+                <SolidColorBrush Color="Black" Opacity="0"/>
             </Grid.Background>
         </Grid>
     </Grid>

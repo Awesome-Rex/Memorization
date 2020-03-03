@@ -16,6 +16,7 @@
     <None Remove="Resources\Icons\TaekwondoIcons.svg" />
     <None Remove="Resources\Icons\Translate.png" />
     <None Remove="Resources\Icons\Undo.png" />
+    <None Remove="Resources\Icons\Yong Gi Crest %28Small%29.ico" />
   </ItemGroup>
 
   <ItemGroup>
@@ -27,12 +28,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <!--<Reference Include="CircularProgressBar">
-      <HintPath>bin\Debug\netcoreapp3.1\CircularProgressBar.dll</HintPath>
-    </Reference>-->
-  </ItemGroup>
-
-  <ItemGroup>
     <Resource Include="Resources\Fonts\Song_Myung\SongMyung-Regular.ttf" />
     <Resource Include="Resources\Icons\Continue.png" />
     <Resource Include="Resources\Icons\Link.png" />
@@ -40,6 +35,7 @@
     <Resource Include="Resources\Icons\TaekwondoIcons.svg" />
     <Resource Include="Resources\Icons\Translate.png" />
     <Resource Include="Resources\Icons\Undo.png" />
+    <Resource Include="Resources\Icons\Yong Gi Crest (Small).ico" />
   </ItemGroup>
 
   <ItemGroup>

@@ -8,7 +8,7 @@
         xmlns:converter="clr-namespace:Practice_Dojang.Resources.Scripts.ViewModels.Converters"
         xmlns:puc="clr-namespace:Practice_Dojang.Resources.Scripts.Views.UserControls.SettingFields"
         
-        Title="Taekwondo" Height="750" Width="1200" WindowState="Maximized" >
+        Title="Taekwondo" Height="750" Width="1200" WindowState="Maximized" Icon="/Resources/Icons/Yong Gi Crest (Small).ico" >
     <Window.Resources>
         
     </Window.Resources>

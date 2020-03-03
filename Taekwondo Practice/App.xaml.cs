@@ -19,6 +19,8 @@ namespace Practice_Dojang
     {
         //ITF_Res.Data.Load();
 
+            public enum ResizeType { Multiply, Add}
+
         public App()
         {
             ITF_Res.Data.Load();
