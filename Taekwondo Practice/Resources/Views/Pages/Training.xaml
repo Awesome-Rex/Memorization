@@ -104,7 +104,7 @@
             <Grid>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="350" MaxWidth="500"/>
-                    <ColumnDefinition Width="2"/>
+                    <ColumnDefinition Width="1"/>
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
 
@@ -112,7 +112,7 @@
                     <Grid.RowDefinitions>
                         <RowDefinition Height="50"/>
                         <RowDefinition Height="*" MinHeight="200"/>
-                        <RowDefinition Height="2"/>
+                        <RowDefinition Height="1"/>
                         <RowDefinition Height="200"/>
                     </Grid.RowDefinitions>
 
@@ -134,7 +134,7 @@
                         </ScrollViewer>
                     </Grid>
 
-                    <GridSplitter Grid.Row="2" HorizontalAlignment="Stretch" Background="Black"/>
+                    <GridSplitter Grid.Row="2" HorizontalAlignment="Stretch"/>
 
                     <Grid Grid.Row="3" Background="#FF3F3F3F">
                         <ScrollViewer VerticalScrollBarVisibility="Hidden" CanContentScroll="True">
@@ -199,7 +199,7 @@
                         </ScrollViewer>
                     </Grid>
                 </Grid>
-                <GridSplitter Grid.Column="1" HorizontalAlignment="Stretch" Background="Black"/>
+                <GridSplitter Grid.Column="1" HorizontalAlignment="Stretch"/>
                 <Grid x:Name="NavigationViewControl" Grid.Column="2">
                     <DockPanel LastChildFill="True">
                         <Grid x:Name="NavigationButtons" DockPanel.Dock="Bottom" Height="100" Background="#FF6F6F6F">
@@ -245,13 +245,13 @@
                             <Grid Name="TranslateView">
                                 <Grid.RowDefinitions>
                                     <RowDefinition Height="*"/>
-                                    <RowDefinition Height="10"/>
+                                    <RowDefinition Height="1"/>
                                     <RowDefinition Height="120"/>
                                 </Grid.RowDefinitions>
 
                                 <Grid></Grid>
 
-                                <GridSplitter Grid.Row="1" HorizontalAlignment="Stretch" Visibility="Visible" IsHitTestVisible="True" Background="Transparent"/>
+                                <GridSplitter Grid.Row="1" HorizontalAlignment="Stretch" Visibility="Visible" IsHitTestVisible="True"/>
 
                                 <Grid Grid.Row="2">
                                     <Grid.Background>

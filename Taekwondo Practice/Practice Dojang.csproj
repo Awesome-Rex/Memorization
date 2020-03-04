@@ -6,6 +6,7 @@
     <RootNamespace>Practice_Dojang</RootNamespace>
     <UseWPF>true</UseWPF>
     <StartupObject></StartupObject>
+    <ApplicationIcon>Resources\Icons\Yong Gi Crest (Small).ico</ApplicationIcon>
   </PropertyGroup>
 
   <ItemGroup>
@@ -13,6 +14,8 @@
     <None Remove="Resources\Icons\Continue.png" />
     <None Remove="Resources\Icons\Link.png" />
     <None Remove="Resources\Icons\Menu.png" />
+    <None Remove="Resources\Icons\Red.ico" />
+    <None Remove="Resources\Icons\Red.png" />
     <None Remove="Resources\Icons\TaekwondoIcons.svg" />
     <None Remove="Resources\Icons\Translate.png" />
     <None Remove="Resources\Icons\Undo.png" />
@@ -32,6 +35,8 @@
     <Resource Include="Resources\Icons\Continue.png" />
     <Resource Include="Resources\Icons\Link.png" />
     <Resource Include="Resources\Icons\Menu.png" />
+    <Resource Include="Resources\Icons\Red.ico" />
+    <Resource Include="Resources\Icons\Red.png" />
     <Resource Include="Resources\Icons\TaekwondoIcons.svg" />
     <Resource Include="Resources\Icons\Translate.png" />
     <Resource Include="Resources\Icons\Undo.png" />
