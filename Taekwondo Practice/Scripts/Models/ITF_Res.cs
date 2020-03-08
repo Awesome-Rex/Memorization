@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Media;
 using System.Threading;
+using System.IO;
 
 namespace ITF_Res
 {
@@ -26,6 +27,7 @@ namespace ITF_Res
 
     public static class Material
     {
+
         #region "Values"
         public static Ranking.Belt[] Ranks;
 
@@ -36,7 +38,7 @@ namespace ITF_Res
         #endregion
 
         #region "Types"
-        public class Excercise : INamed
+        public class Excercise : INamed, IRanked
         {
             public string name { get; set; }
             public int minRank { get; set; }
@@ -172,6 +174,8 @@ namespace ITF_Res
             public int minRank { get; set; }
 
             public MoveTemplate template;
+
+            public float tick;
         }
 
         public class Stance : INamed, IRanked
@@ -430,6 +434,27 @@ namespace ITF_Res
 
         public static class Training
         {
+            //interface IVariety
+            //{
+            //    public int variety { get; set; }
+            //}
+            //interface INav
+            //{
+            //    public Action next { get; set; }
+            //    public Action prev { get; set; }
+            //}
+
+            interface ITimed
+            {
+                public TimeSpan startTime { get; set; }
+                public TimeSpan tick { get; set; }
+
+                public TimeSpan currentTime { get; set; }
+
+                public Action<TimeSpan> ETick { get; set; }
+                public Action EEnd { get; set; }
+            }
+
             public class WarmUp : Command
             {
                 public int Variety = 2;
@@ -460,28 +485,60 @@ namespace ITF_Res
                 }
             }
 
-            public class Sparring : Command
+            public class Sparring : Command, ITimed
             {
-                public float time;
+                public TimeSpan startTime { get; set; }
+                public TimeSpan tick { get; set; }
+                public TimeSpan currentTime { get; set; }
+                public Action<TimeSpan> ETick { get; set; }
+                public Action EEnd { get; set; }
 
                 public override void Execute()
                 {
-                    throw new NotImplementedException();
+                    currentTime = startTime;
+                    ETick(currentTime);
+
+                    while (currentTime <= TimeSpan.Zero)
+                    {
+                        Thread.Sleep(tick);
+
+                        currentTime.Subtract(tick);
+                        ETick(currentTime);
+                    }
+
+                    EEnd();
                 }
             }
 
-            public class SelfDefence : Command
+            public class SelfDefence : Command, ITimed
             {
-                public float time;
+                public TimeSpan startTime { get; set; }
+                public TimeSpan tick { get; set; }
+                public TimeSpan currentTime { get; set; }
+                public Action<TimeSpan> ETick { get; set; }
+                public Action EEnd { get; set; }
 
                 public override void Execute()
                 {
-                    throw new NotImplementedException();
+                    currentTime = startTime;
+                    ETick(currentTime);
+
+                    while (currentTime <= TimeSpan.Zero)
+                    {
+                        Thread.Sleep(tick);
+
+                        currentTime.Subtract(tick);
+                        ETick(currentTime);
+                    }
+
+                    EEnd();
                 }
             }
 
             public class StepSparring : Command
             {
+                public int variety;
+
                 public override void Execute()
                 {
                     throw new NotImplementedException();
@@ -490,11 +547,75 @@ namespace ITF_Res
 
             public class Theory : Command
             {
+                public int variety = 7;
+
+                public Anki.Card currentCard;
+
+                public bool revealed = false;
+
+
+                public static Action<string> EFlip;
+                public static Action ENext;
+
                 public override void Execute()
                 {
-                    throw new NotImplementedException();
+                    for (int i = 0; i < variety; i++)
+                    {
+                        revealed = false;
+                    }
                 }
             }
+        }
+    }
+
+    public static class Anki
+    {
+        public class Card : IRanked
+        {
+            public string Front;
+            public string Back;
+
+            public int minRank
+            {
+                get; set;
+            }
+
+            public Card(string Front, string Back, int minRank)
+            {
+                this.Front = Front;
+                this.Back = Back;
+
+                this.minRank = minRank;
+            }
+        }
+
+        public static string GetLine(string text, int lineNo)
+        {
+            string[] lines = text.Replace("\r", "").Split('\n');
+            return lines.Length >= lineNo ? lines[lineNo - 1] : null;
+        }
+        public static int Lines(string text)
+        {
+            string[] lines = text.Replace("\r", "").Split('\n');
+            return lines.Length;
+        }
+
+        public static Card SelectCard (FileInfo path)
+        {
+            StreamReader sr = File.OpenText(path.FullName);
+
+            string full = sr.ReadToEnd();
+
+            sr.Close();
+
+            return GenerateCard(GetLine(full, new Random().Next(0, Lines(full))), 0);
+        }
+
+        public static Card GenerateCard (string contents, int minRank)
+        {
+            string[] formated = contents.Split("\t", StringSplitOptions.None);
+
+            return new Card(formated[0], formated[1], minRank);
         }
     }
 

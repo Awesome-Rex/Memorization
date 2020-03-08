@@ -98,6 +98,8 @@ namespace ITF_Res
 
     public static class Current 
     {
+        public static float averageTick = 1f;
+
         public static Record record = new Record();
         public static Preferences preferences
         {

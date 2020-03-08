@@ -9,12 +9,15 @@
         <converter:MathConverter x:Key="MathConverter"/>
         <converter:Multiplier x:Key="Multiply"/>
 
-        <Style TargetType="Label">
+        <Style TargetType="Control">
+            <Setter Property="FontFamily" Value="Yu Gothic UI Semibold"/>
+        </Style>
+        <!--<Style TargetType="Label">
             <Setter Property="FontFamily" Value="Yu Gothic UI Semibold"/>
         </Style>
         <Style TargetType="TextBlock">
             <Setter Property="FontFamily" Value="Yu Gothic UI Semibold"/>
-        </Style>
+        </Style>-->
         
         <Style TargetType="Button">
             <Setter Property="Template">
@@ -26,6 +29,15 @@
                     </ControlTemplate>
                 </Setter.Value>
             </Setter>
+        </Style>
+
+        <Style TargetType="StackPanel">
+            <Style.Resources>
+                <Style TargetType="Control">
+                    <Setter Property="Margin" Value="0,0,0,15"/>
+                </Style>
+            </Style.Resources>
+            <Setter Property="Margin" Value="15,10,15,10"/>
         </Style>
 
         <Style TargetType="GridSplitter">

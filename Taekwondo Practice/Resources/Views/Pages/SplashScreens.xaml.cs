@@ -18,6 +18,20 @@ namespace Practice_Dojang.Resources.Views.Pages
     /// </summary>
     public partial class SplashScreens : Page
     {
+
+
+
+        public SplashScreen StartScreen
+        {
+            get { return (SplashScreen)GetValue(StartScreenProperty); }
+            set { SetValue(StartScreenProperty, value); }
+        }
+
+        // Using a DependencyProperty as the backing store for StartScreen.  This enables animation, styling, binding, etc...
+        public static readonly DependencyProperty StartScreenProperty =
+            DependencyProperty.Register("StartScreen", typeof(SplashScreen), typeof(SplashScreens), new PropertyMetadata(null));
+
+
         public SplashScreens()
         {
             InitializeComponent();

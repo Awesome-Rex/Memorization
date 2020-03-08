@@ -122,7 +122,7 @@
                     <Grid Grid.Row="1">
                         <ScrollViewer VerticalScrollBarVisibility="Hidden" CanContentScroll="True">
                             <Grid>
-                                <ListView Grid.Row="1" Background="{x:Null}"/>
+                                <StackPanel></StackPanel>
                                 <Border Background="#FF292929" ClipToBounds="True">
                                     <Border Background="Transparent" BorderBrush="Black" BorderThickness="10" Margin="-10">
                                         <Border.Effect>
