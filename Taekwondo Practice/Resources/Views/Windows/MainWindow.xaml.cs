@@ -30,7 +30,7 @@ namespace Practice_Dojang.Resources.Views.Windows
             InitializeComponent();
 
             Subject.Navigate(new Practice_Dojang.Resources.Views.Pages.Training());
-            MenuBar.Navigate(new Practice_Dojang.Resources.Views.Pages.MenuBar());
+            //MenuBar.Navigate(new Practice_Dojang.Resources.Views.Pages.MenuBar());
         }
     }
 }

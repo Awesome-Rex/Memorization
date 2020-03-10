@@ -18,6 +18,14 @@
         <Style TargetType="TextBlock">
             <Setter Property="FontFamily" Value="Yu Gothic UI Semibold"/>
         </Style>-->
+
+        <Style TargetType="FrameworkElement" x:Key="Line">
+            <Setter Property="Height" Value="30"/>
+        </Style>
+
+        <Style TargetType="FrameworkElement" x:Key="LineField" BasedOn="{StaticResource Line}">
+            <Setter Property="Margin" Value="0, 0, 0, 15"/>
+        </Style>
         
         <Style TargetType="Button">
             <Setter Property="Template">
@@ -42,10 +50,11 @@
 
         <Style TargetType="GridSplitter">
             <Setter Property="Background" Value="Transparent"/>
+            <Setter Property="BorderBrush" Value="Transparent"/>
             <Setter Property="BorderThickness" Value="8"/>
             <Setter Property="Margin" Value="-8"/>
             <Setter Property="Visibility" Value="Visible"/>
-            <Setter Property="Opacity" Value="0"/>
+            <!--<Setter Property="Opacity" Value="0"/>-->
         </Style>
         
     </Application.Resources>
