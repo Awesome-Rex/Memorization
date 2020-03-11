@@ -23,7 +23,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Resources\Views\UserControls\SettingFields\" />
     <Folder Include="Resources\Views\UserControls\TrainingCommands\" />
   </ItemGroup>
 

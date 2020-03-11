@@ -4,7 +4,7 @@ using System.Globalization;
 using System.Text;
 using System.Windows.Data;
 
-namespace Practice_Dojang.ViewModels.Converters
+namespace Practice_Dojang.Scripts.ViewModels.Converters
 {
     /*class Resizer : IValueConverter
     {

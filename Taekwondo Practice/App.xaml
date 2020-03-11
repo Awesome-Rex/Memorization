@@ -9,8 +9,8 @@
              StartupUri="Resources/Views/Windows/MainWindow.xaml">
     <Application.Resources>
         <!--converters-->
-        <converter:Practice_Dojang.Resources.ViewModels.Converters.MathConverter x:Key="MathConverter"/>
-        <converter:Practice_Dojang.Resources.ViewModels.Converters.Multiplier x:Key="Multiply"/>
+        <converter:MathConverter x:Key="MathConverter"/>
+        <converter:Multiplier x:Key="Multiply"/>
         
         <!--system-->
         <sys:Double x:Key="LineHeight">30</sys:Double>
@@ -22,7 +22,7 @@
         </Style>
 
         
-        <Style TargetType="{x:Type uc:NameField}">
+        <Style TargetType="uc:NameField">
             <Setter Property="Foreground" Value="White"/>
             <Setter Property="FontSize" Value="{Binding Height, Converter={StaticResource MathConverter}, ConverterParameter=@VALUE*0.5}"/>
         </Style>
