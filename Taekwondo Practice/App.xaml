@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              
              xmlns:converter="clr-namespace:Practice_Dojang.Resources.Scripts.ViewModels.Converters"
-             xmlns:uc="clr-namespace:Practice_Dojang.Resources.Scripts.Views.UserControls"
+             xmlns:uc="clr-namespace:Practice_Dojang.Resources.Scripts.Views.UserControls.SettingFields"
              xmlns:sys="clr-namespace:System;assembly=System.Runtime"
              
              StartupUri="Resources/Views/Windows/MainWindow.xaml">
