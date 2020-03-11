@@ -9,17 +9,16 @@
              
              xmlns:converter="clr-namespace:Practice_Dojang.Resources.Scripts.ViewModels.Converters"
              
-             Style="{StaticResource LineField}"
              DataContext="{Binding RelativeSource={RelativeSource Mode=Self}}"
              
-             Foreground="White" HorizontalAlignment="Stretch" VerticalContentAlignment="Center" FontSize="{Binding Height, Converter={StaticResource MathConverter}, ConverterParameter=@VALUE*0.5}">
+             HorizontalAlignment="Stretch" VerticalContentAlignment="Center" FontSize="{Binding Height, Converter={StaticResource MathConverter}, ConverterParameter=@VALUE*0.5}">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="{Binding NameWidth}"/>
             <ColumnDefinition Width="{Binding FieldWidth}"/>
         </Grid.ColumnDefinitions>
         
-        <Label Content="{Binding FieldName}" Foreground="{Binding Foreground}" VerticalContentAlignment="{Binding VerticalContentAlignment}" FontSize="{Binding FontSize}"></Label>
+        <Label Content="{Binding FieldName}" FontFamily="{Binding FontFamily}" Foreground="{Binding Foreground}" VerticalContentAlignment="{Binding VerticalContentAlignment}" FontSize="{Binding FontSize}"></Label>
         <ContentPresenter Grid.Column="1" Content="{Binding Field}"/>
     </Grid>
 </UserControl>

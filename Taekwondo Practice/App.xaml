@@ -3,29 +3,36 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              
              xmlns:converter="clr-namespace:Practice_Dojang.Resources.Scripts.ViewModels.Converters"
+             xmlns:uc="clr-namespace:Practice_Dojang.Resources.Scripts.Views.UserControls"
+             xmlns:sys="clr-namespace:System;assembly=System.Runtime"
+             
              StartupUri="Resources/Views/Windows/MainWindow.xaml">
     <Application.Resources>
-
+        <!--converters-->
         <converter:MathConverter x:Key="MathConverter"/>
         <converter:Multiplier x:Key="Multiply"/>
+        
+        <!--system-->
+        <sys:Double x:Key="LineHeight">30</sys:Double>
+        <sys:Double x:Key="LineSpacing">15</sys:Double>
 
-        <Style TargetType="Control">
+        <!--control defaults-->
+        <Style TargetType="Control"> 
             <Setter Property="FontFamily" Value="Yu Gothic UI Semibold"/>
         </Style>
-        <!--<Style TargetType="Label">
-            <Setter Property="FontFamily" Value="Yu Gothic UI Semibold"/>
-        </Style>
-        <Style TargetType="TextBlock">
-            <Setter Property="FontFamily" Value="Yu Gothic UI Semibold"/>
-        </Style>-->
 
-        <Style TargetType="FrameworkElement" x:Key="Line">
+        
+        <Style TargetType="uc:NameField">
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="FontSize" Value="{Binding Height, Converter={StaticResource MathConverter}, ConverterParameter=@VALUE*0.5}"/>
+        </Style>
+
+        <!--<Style TargetType="FrameworkElement" x:Key="Line">
             <Setter Property="Height" Value="30"/>
         </Style>
-
         <Style TargetType="FrameworkElement" x:Key="LineField" BasedOn="{StaticResource Line}">
             <Setter Property="Margin" Value="0, 0, 0, 15"/>
-        </Style>
+        </Style>-->
         
         <Style TargetType="Button">
             <Setter Property="Template">
