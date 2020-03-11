@@ -11,7 +11,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Practice_Dojang.Resources.Scripts.Views.UserControls.SettingFields
+namespace Practice_Dojang.Resources.Views.UserControls
 {
 
     public partial class NameField : UserControl
