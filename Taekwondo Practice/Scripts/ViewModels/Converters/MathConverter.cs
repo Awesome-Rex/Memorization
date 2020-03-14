@@ -20,36 +20,36 @@ namespace Practice_Dojang.Resources.Scripts.ViewModels.Converters
         {
             //if (targetType == typeof(double)) {
 
-                // Parse value into equation and remove spaces
-                var mathEquation = parameter as string;
-                mathEquation = mathEquation.Replace(" ", "");
-                mathEquation = mathEquation.Replace("@VALUE", ((double)value).ToString());
+            // Parse value into equation and remove spaces
+            var mathEquation = parameter as string;
+            mathEquation = mathEquation.Replace(" ", "");
+            mathEquation = mathEquation.Replace("@VALUE", ((double)value).ToString());
 
-                // Validate values and get list of numbers in equation
-                var numbers = new List<double>();
-                double tmp;
+            // Validate values and get list of numbers in equation
+            var numbers = new List<double>();
+            double tmp;
 
-                foreach (string s in mathEquation.Split(_allOperators))
+            foreach (string s in mathEquation.Split(_allOperators))
+            {
+                if (s != string.Empty)
                 {
-                    if (s != string.Empty)
+                    if (double.TryParse(s, out tmp))
                     {
-                        if (double.TryParse(s, out tmp))
-                        {
-                            numbers.Add(tmp);
-                        }
-                        else
-                        {
-                            // Handle Error - Some non-numeric, operator, or grouping character found in string
-                            throw new InvalidCastException();
-                        }
+                        numbers.Add(tmp);
+                    }
+                    else
+                    {
+                        // Handle Error - Some non-numeric, operator, or grouping character found in string
+                        throw new InvalidCastException();
                     }
                 }
+            }
 
-                // Begin parsing method
-                EvaluateMathString(ref mathEquation, ref numbers, 0);
+            // Begin parsing method
+            EvaluateMathString(ref mathEquation, ref numbers, 0);
 
-                // After parsing the numbers list should only have one value - the total
-                return ((double)(numbers[0])).ToString();
+            // After parsing the numbers list should only have one value - the total
+            return numbers[0].ToString();
             //}
         }
 
@@ -98,7 +98,7 @@ namespace Practice_Dojang.Resources.Scripts.ViewModels.Converters
                     // Verify that enough numbers exist in the List<double> to complete the operation
                     // and that the next token is either the number expected, or it was a ( meaning
                     // that this was called recursively and that the number changed
-                    if (numbers.Count > (index + 1) &&
+                    if (numbers.Count > index + 1 &&
                         (double.Parse(nextToken) == numbers[index + 1] || nextToken == "("))
                     {
                         switch (token)
@@ -147,7 +147,7 @@ namespace Practice_Dojang.Resources.Scripts.ViewModels.Converters
             {
                 if (_allOperators.Contains(c))
                 {
-                    return (tmp == "" ? c.ToString() : tmp);
+                    return tmp == "" ? c.ToString() : tmp;
                 }
                 else
                 {

@@ -11,7 +11,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Practice_Dojang.Resources.Scripts.Views.UserControls.SettingFields
+namespace Practice_Dojang.Resources.Scripts.Views.UserControls.Fields
 {
 
     public partial class NameField : UserControl
@@ -42,6 +42,9 @@ namespace Practice_Dojang.Resources.Scripts.Views.UserControls.SettingFields
 
         public bool FieldOverflow { get { return (bool)GetValue(FieldOverflowProperty); } set { SetValue(FieldOverflowProperty, value); } }
         public static readonly DependencyProperty FieldOverflowProperty = DependencyProperty.Register("FieldOverflow", typeof(bool), typeof(NameField), new PropertyMetadata(false));
+
+        public double NameHeight { get { return (double)GetValue(NameHeightProperty); } set { SetValue(NameHeightProperty, value); } }
+        public static readonly DependencyProperty NameHeightProperty = DependencyProperty.Register("NameHeight", typeof(double), typeof(NameField), new PropertyMetadata(30));
 
         public NameField()
         {

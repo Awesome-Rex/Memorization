@@ -53,6 +53,47 @@ namespace ITF_Res
     [Serializable]
     public class Preferences : IDefaultable
     {
+        //training view
+        public double TrainingTextSize;
+        public double TrainingCountSize;
+
+        public enum CountFormat { 
+            Standard, Written, WrittenKorean
+        }
+
+        public bool ShowAnswerLine;
+
+        //fields
+        private double _FontSize;
+        public double FontSize
+        {
+            get
+            {
+                return LineHeight * 0.5d;
+            }
+            set
+            {
+                _FontSize = value;
+            }
+        }
+
+        private double _LineHeight;
+        public double LineHeight
+        {
+            get
+            {
+                return _FontSize / 0.5d;
+            }
+            set
+            {
+                _LineHeight = value;
+            }
+        }
+
+        //Sound
+        public double BackgroundVolume;
+        public double SFXVolume;
+
         public void SetDefault()
         {
 
@@ -64,11 +105,10 @@ namespace ITF_Res
         }
     }
 
-    [Serializable]
+    /*[Serializable]
     public class Settings : IDefaultable
     {
-        public float noiseVolume;
-        public float SFXVolume;
+        
 
         public void SetDefault()
         {
@@ -79,7 +119,7 @@ namespace ITF_Res
         {
             SetDefault();
         }
-    }
+    }*/
 
     [Serializable]
     public class TrainingPreset
@@ -112,7 +152,7 @@ namespace ITF_Res
                 Data.preferences.value = value;
             }
         }
-        public static Settings settings
+        /*public static Settings settings
         {
             get
             {
@@ -122,7 +162,7 @@ namespace ITF_Res
             {
                 Data.settings.value = value;
             }
-        }
+        }*/
 
         public static List<Command> SessionStructure = new List<Command>();
         public static Command currentStrand;
@@ -163,7 +203,7 @@ namespace ITF_Res
 
         public static Saved<List<Record>> records = new Saved<List<Record>>(@"C:\REX_Saves\YongGiPracticeDojang\Records.save", SerializeMethod.Byte);
         public static Saved<Preferences> preferences = new Saved<Preferences>(@"C:\REX_Saves\YongGiPracticeDojang\Preferences.json", SerializeMethod.JSON);
-        public static Saved<Settings> settings = new Saved<Settings>(@"C:\REX_Saves\YongGiPracticeDojang\Settings.json", SerializeMethod.JSON);
+        //public static Saved<Settings> settings = new Saved<Settings>(@"C:\REX_Saves\YongGiPracticeDojang\Settings.json", SerializeMethod.JSON);
         public static Saved<List<TrainingPreset>> presets = new Saved<List<TrainingPreset>>(@"C:\REX_Saves\YongGiPracticeDojang\TrainingPresets.json", SerializeMethod.JSON);
 
         public class Saved <T>
@@ -278,13 +318,13 @@ namespace ITF_Res
 
             records.Create();
             preferences.Create();
-            settings.Create();
+            //settings.Create();
             presets.Create();
 
             //defaults
             records.value = new List<Record>();
             preferences.value = new Preferences();
-            settings.value = new Settings();
+            //settings.value = new Settings();
             presets.value = new List<TrainingPreset>();
         }
 
@@ -294,7 +334,7 @@ namespace ITF_Res
             //saves to files
             records.Save();
             preferences.Save();
-            settings.Save();
+            //settings.Save();
             presets.Save();
         }
 
@@ -310,14 +350,14 @@ namespace ITF_Res
                 // direcrory does exist
                 //load from files
 
-                if (settings.Exists())
+                /*if (settings.Exists())
                 {
                     settings.Load();
                 } else
                 {
                     settings.Create();
                     settings.value = new Settings();
-                }
+                }*/
                 if (preferences.Exists())
                 {
                     preferences.Load();

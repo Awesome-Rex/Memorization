@@ -6,7 +6,7 @@
         mc:Ignorable="d"
         
         xmlns:converter="clr-namespace:Practice_Dojang.Resources.Scripts.ViewModels.Converters"
-        xmlns:puc="clr-namespace:Practice_Dojang.Resources.Scripts.Views.UserControls.SettingFields"
+        xmlns:puc="clr-namespace:Practice_Dojang.Resources.Scripts.Views.UserControls.Fields"
         
         Title="Taekwondo" Height="750" Width="1200" WindowState="Maximized" Icon="/Resources/Icons/Red.ico" >
     <Window.Resources>

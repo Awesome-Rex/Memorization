@@ -6,13 +6,13 @@
       mc:Ignorable="d"
       d:DesignHeight="750" d:DesignWidth="1200"
       Title="Training"
-      xmlns:uc="clr-namespace:Practice_Dojang.Resources.Scripts.Views.UserControls.SettingFields">
+      xmlns:uc="clr-namespace:Practice_Dojang.Resources.Scripts.Views.UserControls.Fields">
 
     <Page.Resources>
-        <Style TargetType="{x:Type uc:NameField}">
+        <!--<Style TargetType="{x:Type uc:NameField}">
             <Setter Property="Foreground" Value="White"/>
             <Setter Property="NameWidth" Value="2*"/>
-        </Style>
+        </Style>-->
 
         <Style TargetType="Button" x:Key="InteractionNavigation">
             <Setter Property="Background" Value="#FF6F6F6F"/>
